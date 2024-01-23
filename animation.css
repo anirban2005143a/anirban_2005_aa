@@ -1,0 +1,391 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(61, 61, 61);
+}
+  /* scroll bar stylling */
+::-webkit-scrollbar{
+    width: 0.5rem;
+    height:0.5rem;
+}
+::-webkit-scrollbar-button{
+    color: red;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(27, 27, 27);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 51, 51);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(72, 72, 72);
+}
+
+/* header stylling */
+header{ 
+    height:25px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    justify-content: left;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+/* nameIMG stylling */
+.nameIMG{
+    height: auto;
+    width: 115px;
+    background-image: url(name_img.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left: 3%; 
+    cursor: pointer;
+    
+}
+
+/* section are stylling */
+.section{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    overflow: visible;
+    margin-left: 8%;
+}
+/* stylling of a tag under section div */
+.section a{
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(112, 111, 111);
+    text-decoration: none;
+}
+
+/* stylling of a tag under section div on hover */
+.section a:hover{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(175, 175, 175);
+}
+
+/* searchbar styling */
+.searchbar{
+    height:35px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: visible;
+    position: fixed;
+    top: 0.4rem;
+    right: 1rem;
+}
+
+/* searchbar input stylling */
+#search{
+    height: 20px;
+    width: 90%;
+    font-family:arial;
+    font-size: 0.8rem;
+    background-color:rgb(83, 83, 83);
+    text-align: center;
+    font-weight: 100;
+    border-style: none;
+    border-radius: 7px;    
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    outline: none;
+}
+
+/* searchbar input on hover */
+#search:hover{
+    background-color: rgb(116, 116, 116);
+    border-style: none;
+}
+
+#search:focus{
+    background-color: rgb(129, 129, 129);
+    border-style: none;
+    border-radius: 10px;
+    height:26px;
+    width: 100%;
+}
+
+
+::placeholder{
+    color:  rgb(0, 0, 0);      
+}
+
+/* searchIcon stylling */
+/* .searchIcon{
+    width: 10%;
+    height: 100%;
+    background-color: rgb(97, 97, 97);
+    padding-left: 7px;
+    padding-top: 4px;
+} */
+
+/* nav sidebar stylling */
+.sideNavBar{
+    height:auto;
+    width: 15%;
+    position:fixed;
+    left: 0;
+    top: 40px;
+    /* display: flex;
+    flex-direction: column; */
+    background-color: black;
+}
+
+/* NavBarHeading stylling */
+.NavBarHeading{
+    height: 1.5rem;
+    width: 100%;
+    padding-left: 4%;
+    padding-top: 0.5rem;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+/* navsidebar cayegory stylling */
+.categories{
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    line-height: 1.2rem;
+}
+
+/* category stylling */
+.categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(71, 71, 71);
+    margin-left: 20%;
+    text-decoration: none;
+}
+
+.categories a:hover{
+    font-weight: 800;
+    color: grey;
+}
+.copyright{
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(100, 100, 100);
+    padding-left: 0.5rem;
+}
+.movie-wrapper{
+    height: auto;
+    width: 85%;
+    position: absolute;
+    top: 30px;
+    left: 15%;
+    background-image: linear-gradient(to right, black, transparent , transparent);
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom:1px solid gray ;
+    overflow: hidden;
+}
+.movie-wrapper .heading{
+    height: auto;
+    width: 100%;
+    background-image: linear-gradient(to bottom , black , rgb(16, 16, 16) , transparent);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    padding-left: 2rem;
+    padding-top: 1.3rem;
+    padding-bottom: 0.5rem;
+    overflow: visible;
+    letter-spacing: 0.1rem;
+}
+
+.movie-list{
+    height: auto;
+    width:100%;
+    background-color:transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    /* transform: translateX(0); */
+    transition: 800ms all ease-in-out;
+    overflow: visible;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.movie-item{
+    width:17.1%;
+    height: auto;
+    background-image: linear-gradient(to bottom , black,black ,black , transparent);
+    overflow: visible;
+    position: relative;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.movie-item img{
+    width: auto;
+    height: 90%;
+    z-index: 750;
+    border-style: none;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+}
+.movie-item:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+.movie-item:hover .movie-image{
+    border-radius: 20px; 
+    opacity: 0.6;
+    z-index: 800;
+}
+.movie-item:hover .description{
+    opacity: 1;
+}
+.movie-item:hover .movie-name{
+    opacity: 0;
+}
+.movie-item:hover .ratingAndYear{
+    opacity: 0;
+} 
+
+.description{
+    z-index: 800;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+}
+.description .name{
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+.description .overview{
+    font-size: 0.6rem;
+    font-weight: lighter;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+.description .watch{
+    color: white;
+    width: 60%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    justify-content: space-between;
+}
+.description .watch button{
+    height: auto;
+    width:auto;
+    background-color: red;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    text-align: center;
+    border-style: none;
+    padding: 5%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.description .watch span{
+    height: auto;
+    width: 40%;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+}
+.movie-name{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    font-size: 1.2rem;
+    font-family: open sans;
+    font-weight: 400;
+    color: white;
+    padding-left: 0.5rem;
+    padding-top: 0.3rem;
+    overflow-x: hidden;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+}
+.ratingAndYear{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+
+.ratingAndYear .rating{
+    height: auto;
+    width: auto;
+    font-size: 0.7rem;
+    color: white;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+.ratingAndYear .year{
+    height:auto;
+    width: auto;
+    font-size: 1rem;
+    background-color: grey;
+    color:rgb(0, 0, 0);
+    margin-right: 10%;
+    font-family: open sans;
+    overflow: hidden;
+    align-items: center;
+}

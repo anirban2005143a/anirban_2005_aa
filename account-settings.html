@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+    <link rel="icon" href="icon_image.png" type="image/icon type">
+    <title>MovieFlix</title>
+    <link rel="stylesheet" href="account-settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    
+    <header>
+        <!-- webpage name  image -->
+        <div onclick="gethomepage()" class="nameIMG"></div>
+
+        <!-- different section -->
+        <div class="section">
+            <div class="sectionType"><a href="movies.html">MOVIES</a></div>
+            <div class="sectionType"><a href="tv-shows.html">TV SERIES</a></div>
+            <div class="sectionType"><a href="popular.html" >POPULAR</a></div>
+            <div class="sectionType"><a href="tranding.html">TRENDING</a></div>
+            <div class="account sectionType" id="updateName" style="cursor: pointer;"><a><i class="fa-solid fa-user" style="color: #bdbdbd;"></i></a></div>
+            <input id="hello" style="display: none;" value="hello">
+
+        </div>
+        
+        
+        <div class="menuBTN" onclick="showMenuBar()"></div>
+        <div class="searchBTN" onclick="showSearchBar()"></div>
+
+        <!-- //search button -->
+        <!-- <div class="searchbar">
+            <form id="form"><input id="search" style="border-style: none;" placeholder="Search Your Movie"></form>   
+        </div> -->
+
+    </header>
+
+
+    <div class="account-settings">
+        <a href="log-in.html" class="sign-out" id="Sign-Out">Sign-out</a>
+        <a href="wishlist.html" href="#" class="wishlist">Wishlist</a>
+        <a href="account-settings.html" class="settings">Settings</a>
+        <a href="rating.html" class="settings">Ratings</a>
+    </div>
+
+
+    <!-- side navbar -->
+    <nav>
+        <div class="sideNavBar1">
+        
+            <!-- different categories -->
+            <div class="NavBarHeading">Genre</div>
+            <div class="categories"><a href="adventure.html">Adventure</a></div>
+            <div class="categories"><a href="fanteny.html">Fantasy</a></div>
+            <div class="categories"><a href="animation.html">Animation</a></div>
+            <div class="categories"><a href="darma.html">Drama</a></div>
+            <div class="categories"><a href="horror.html">Horror</a></div>
+            <div class="categories"><a href="action.html">Action</a></div>
+            <div class="categories"><a href="comedy.html">Comedy</a></div>
+            <div class="categories"><a href="history.html">History</a></div>
+            <div class="categories"><a href="western.html">Western</a></div>
+            <div class="categories"><a href="thriller.html">Thriller</a></div>
+            <div class="categories"><a href="crime.html">Crime</a></div>
+            <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+            <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+            <div class="categories"><a href="mistry.html">Mystery</a></div>
+            <div class="categories"><a href="music.html">Music</a></div>
+            <div class="categories"><a href="romance.html">Romance</a></div>
+            <div class="categories"><a href="family.html">Family</a></div>
+            <div class="categories"><a href="war.html">War</a></div>
+           
+            <!-- choose your language -->
+            <div class="NavBarHeading">Language</div>
+            <div class="categories"><a href="english.html">English</a></div>
+            <div class="categories"><a href="hindi.html">Hindi</a></div>
+            <div class="categories"><a href="bengali.html">Bengali</a></div>
+            <!-- user account -->
+            <div class="copyright">movieflix@265aa</div>
+
+        </div>
+
+        <div class="sideNavBar"> 
+            <div class="genre">
+                <div class="NavBarHeading">Genre</div>
+                <div id="category">
+                    <div class="categories"><a href="adventure.html">Adventure</a></div>
+                <div class="categories"><a href="fanteny.html">Fantasy</a></div>
+                <div class="categories"><a href="animation.html">Animation</a></div>
+                <div class="categories"><a href="darma.html">Drama</a></div>
+                <div class="categories"><a href="horror.html">Horror</a></div>
+                <div class="categories"><a href="action.html">Action</a></div>
+                <div class="categories"><a href="comedy.html">Comedy</a></div>
+                <div class="categories"><a href="history.html">History</a></div>
+                <div class="categories"><a href="western.html">Western</a></div>
+                <div class="categories"><a href="thriller.html">Thriller</a></div>
+                <div class="categories"><a href="crime.html">Crime</a></div>
+                <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+                <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+                <div class="categories"><a href="mistry.html">Mystery</a></div>
+                <div class="categories"><a href="music.html">Music</a></div>
+                <div class="categories"><a href="romance.html">Romance</a></div>
+                <div class="categories"><a href="family.html">Family</a></div>
+                <div class="categories"><a href="war.html">War</a></div>
+                </div>
+            </div>
+            <div class="language-account-copyright">
+                <div class="language">
+                    <div class="NavBarHeading">Language</div>
+                    <div class="categories"><a href="english.html">English</a></div>
+                    <div class="categories"><a href="hindi.html">Hindi</a></div>
+                    <div class="categories"><a href="bengali.html">Bengali</a></div>
+                </div>
+                <div class="copyright">movieflix@265aa</div>
+            </div>
+             
+        </div>
+    </nav>
+    
+        <div class="midpage-content">
+            <div class="main-content">
+                <div class="heading"><i class="fa-solid fa-user" style="color: #004cff;"></i><p>hii</p></div>
+                <div class="information">
+                    <div class="firstname"></div>
+                    <div class="lastname"></div>
+                    <div class="email"></div>
+                    <div class="password"></div>
+                </div>
+            </div>
+        </div>
+    
+    
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+        import { getDatabase, ref , get, child } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyACFoTUxtBAzWHg4c1-2vC9UAumSmmzjnY",
+          authDomain: "movieflix-c7a43.firebaseapp.com",
+          databaseURL: "https://movieflix-c7a43-default-rtdb.firebaseio.com",
+          projectId: "movieflix-c7a43",
+          storageBucket: "movieflix-c7a43.appspot.com",
+          messagingSenderId: "289003154218",
+          appId: "1:289003154218:web:9a994bece8172785824c53",
+          measurementId: "G-F52DXVS77G"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+        const dbref = ref(db);
+        
+        let content = document.getElementsByClassName("main-content")[0]
+        content.innerHTML=` <div class="heading"><i class="fa-solid fa-user" style="color: #004cff;"></i><p>USER-INFO</p></div></div>`
+
+        let bv = window.localStorage.getItem("user-id")
+        console.log(bv)
+
+        Getuserdetails()
+        function Getuserdetails() {
+            let bv = window.localStorage.getItem("user-id")
+            console.log(bv)
+            get(child(dbref, `Users/${bv}/information/`)).then((info)=>{
+                info.forEach(user =>{
+                    addDetails(user)
+                    console.log(user)
+                })
+                
+                    let buttons = document.createElement("div")
+                    buttons.classList.add("buttons")
+                    buttons.innerHTML=`
+                        <button>Sign-out</button>
+                        <button>Wishlist</button>
+                        <button>Your Ratings</button>
+                    `
+                    content.appendChild(buttons)
+
+                    let signoutBTN = document.querySelectorAll("button")[0]
+                    signoutBTN.addEventListener("click" , ()=>{
+                        sessionStorage.removeItem("user-creds")
+                        sessionStorage.removeItem("user-info")
+                        window.location.href = "log-in.html"
+                    })
+
+                    let WishlistBTN = document.querySelectorAll("button")[1]
+                    WishlistBTN.addEventListener("click" , ()=>{
+                        window.location.href = "wishlist.html"
+                    })
+
+                    let ratingBTN = document.querySelectorAll("button")[2]
+                    ratingBTN.addEventListener("click" , ()=>{
+                        window.location.href = "rating.html"
+                    })
+                
+            })
+        }
+
+        function addDetails(user) {
+            let key = user.key
+            let value = user.val()
+
+            console.log(value)
+
+            console.log(key , value)
+            // let passwordLength = value.password.length
+            // function displaypassword(a) {
+            //     for(let i=1 ;i<= a;i++ ){
+            //         console.log("*")
+            //     }
+            // }
+
+            let information = document.createElement("div")
+            information.classList.add("information")
+            information.innerHTML=`
+            <div class="firstname">First Name:&nbsp; ${value.firstname}</div>
+            <div class="lastname">Last Name:&nbsp; ${value.lastname}</div>
+            <div class="email">Email:&nbsp; ${value.useremail}</div>
+            <div class="password">Password:&nbsp; ${value.password}</div>
+            `
+            content.appendChild(information)
+
+            console.log(value.firstname)
+            console.log(value.password.length)
+        }
+
+</script>   
+<script src="account-settings.js"></script>    
+
+
+</body>
+</html>

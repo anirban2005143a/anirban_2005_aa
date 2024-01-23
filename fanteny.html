@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icon_image.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIEFLIX</title>
+    <!-- css link --> <link rel="stylesheet" href="adventure.css">
+    <!-- fontawsome css link -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <!-- webpage name  image -->
+        <div onclick="gethomepage()" class="nameIMG"></div>
+
+        <!-- different section -->
+        <div class="section">
+            <div class="sectionType"><a href="movies.html">MOVIES</a></div>
+            <div class="sectionType"><a href="tv-shows.html">TV SERIES</a></div>
+            <div class="sectionType"><a href="popular.html" >POPULAR</a></div>
+            <div class="sectionType"><a href="tranding.html">TRENDING</a></div>
+            <div class="account sectionType" id="updateName" style="cursor: pointer;"><a><i class="fa-solid fa-user" style="color: #bdbdbd;"></i></a></div>
+            <input id="hello" style="display: none;" value="hello">
+
+        </div>
+        
+        
+        <div class="menuBTN" onclick="showMenuBar()"></div>
+        <div class="searchBTN" onclick="showSearchBar()"></div>
+
+        <!-- //search button -->
+        <!-- <div class="searchbar">
+            <form id="form"><input id="search" style="border-style: none;" placeholder="Search Your Movie"></form>   
+        </div> -->
+
+    </header>
+
+    <div class="account-settings">
+        <a href="log-in.html" class="sign-out" id="Sign-Out">Sign-out</a>
+        <a href="wishlist.html" href="#" class="wishlist">Wishlist</a>
+        <a href="account-settings.html" class="settings">Settings</a>
+        <a href="rating.html" class="settings">Ratings</a>
+    </div>
+
+
+    <!-- side navbar -->
+    <nav>
+        <div class="sideNavBar1">
+        
+            <!-- different categories -->
+            <div class="NavBarHeading">Genre</div>
+            <div class="categories"><a href="adventure.html">Adventure</a></div>
+            <div class="categories"><a href="fanteny.html" style="font-size: 0.9rem;font-weight: bold;color: rgb(175, 175, 175);">Fantasy</a></div>
+            <div class="categories"><a href="animation.html">Animation</a></div>
+            <div class="categories"><a href="darma.html">Drama</a></div>
+            <div class="categories"><a href="horror.html">Horror</a></div>
+            <div class="categories"><a href="action.html">Action</a></div>
+            <div class="categories"><a href="comedy.html">Comedy</a></div>
+            <div class="categories"><a href="history.html">History</a></div>
+            <div class="categories"><a href="western.html">Western</a></div>
+            <div class="categories"><a href="thriller.html">Thriller</a></div>
+            <div class="categories"><a href="crime.html">Crime</a></div>
+            <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+            <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+            <div class="categories"><a href="mistry.html">Mystery</a></div>
+            <div class="categories"><a href="music.html">Music</a></div>
+            <div class="categories"><a href="romance.html">Romance</a></div>
+            <div class="categories"><a href="family.html">Family</a></div>
+            <div class="categories"><a href="war.html">War</a></div>
+           
+            <!-- choose your language -->
+            <div class="NavBarHeading">Language</div>
+            <div class="categories"><a href="english.html">English</a></div>
+            <div class="categories"><a href="hindi.html">Hindi</a></div>
+            <div class="categories"><a href="bengali.html">Bengali</a></div>
+            <!-- user account -->
+            <div class="copyright">movieflix@265aa</div>
+
+        </div>
+
+        <div class="sideNavBar"> 
+            <div class="genre">
+                <div class="NavBarHeading">Genre</div>
+                <div id="category">
+                    <div class="categories"><a href="adventure.html">Adventure</a></div>
+                <div class="categories"><a href="fanteny.html" style="font-weight: 800;color: rgb(151, 151, 151);">Fantasy</a></div>
+                <div class="categories"><a href="animation.html">Animation</a></div>
+                <div class="categories"><a href="darma.html">Drama</a></div>
+                <div class="categories"><a href="horror.html">Horror</a></div>
+                <div class="categories"><a href="action.html">Action</a></div>
+                <div class="categories"><a href="comedy.html">Comedy</a></div>
+                <div class="categories"><a href="history.html">History</a></div>
+                <div class="categories"><a href="western.html">Western</a></div>
+                <div class="categories"><a href="thriller.html">Thriller</a></div>
+                <div class="categories"><a href="crime.html">Crime</a></div>
+                <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+                <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+                <div class="categories"><a href="mistry.html">Mystery</a></div>
+                <div class="categories"><a href="music.html">Music</a></div>
+                <div class="categories"><a href="romance.html">Romance</a></div>
+                <div class="categories"><a href="family.html">Family</a></div>
+                <div class="categories"><a href="war.html">War</a></div>
+                </div>
+            </div>
+            <div class="language-account-copyright">
+                <div class="language">
+                    <div class="NavBarHeading">Language</div>
+                    <div class="categories"><a href="english.html">English</a></div>
+                    <div class="categories"><a href="hindi.html">Hindi</a></div>
+                    <div class="categories"><a href="bengali.html">Bengali</a></div>
+                </div>
+                <div class="copyright">movieflix@265aa</div>
+            </div>
+            
+        </div>
+    </nav>
+
+    <main>
+        
+            <div class="movie-wrapper">
+                <div class="heading">
+                    all&nbsp; Fantasy&nbsp;  movies
+                </div>
+                
+                <div class="movie-list">
+                    <div class="movie-item">
+                        <img class="movie-image" src="poster1.jpeg">
+                        <div class="description">
+                            <div class="name">MOBBIUS</div>
+                            <div class="overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam quisquam maxime corrupti voluptates.</div>
+                            <div class="watch"><button>Watch</button><span>8.7</span></div>
+                        </div>
+                        <div class="movie-name">Morbius</div>
+                        <div class="ratingAndYear">
+                            <div class="rating"><i class="fa-solid fa-star" style="color: #ffbb00;"></i>&nbsp;8.5</div>
+                            <div class="year">2022</div>
+                        </div>
+                    </div>    
+                        
+                </div>
+                <div class="load-more">
+                    <button>Load More</button>
+                </div>
+            </div>
+    </main>
+<script src="fantesy.js"></script>    
+</body>
+</html>

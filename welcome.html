@@ -1,0 +1,135 @@
+
+<html >
+<head>
+    <link rel="icon" href="icon_image.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix</title>
+   <!--  google font links--><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Libre+Baskerville&family=Libre+Franklin:wght@100;500&family=Lora&family=Merriweather:wght@300&family=Montserrat:wght@100;900&family=Open+Sans:wght@300&family=PT+Sans&family=Playfair+Display&family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
+   
+    <!--  google font links--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Libre+Baskerville&family=Libre+Franklin:wght@100;500&family=Lora&family=Merriweather:wght@300&family=Montserrat:wght@100;900&family=Open+Sans:wght@300;700&family=PT+Sans&family=Playfair+Display&family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
+
+    <!-- google font family css link --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Libre+Baskerville&family=Libre+Franklin:wght@100;500&family=Lora&family=Merriweather:wght@300&family=Montserrat:wght@100&family=PT+Sans&family=Playfair+Display&family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
+
+    <!-- css link --> <link rel="stylesheet" href="welcome.css">
+    <!-- link for tv animation --> <link rel="stylesheet" href="tv-animation.css">
+    <!-- link for download section --><link rel="stylesheet" href="downloading-anime.css">
+</head>
+<body>
+    <div class="header">
+        <!-- webpage name  image -->
+        <div class="nameIMG"></div>
+
+        <div class="language-and-login">
+            <select class="language">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+
+            <button class="signUp" onclick="replacepage()" >
+                Sign Up
+            </button>
+        </div>
+    </div>
+
+    <div class="page-background"></div>
+    <div class="page-shadow"></div>
+    <div class="mid-page-content">
+        <div class="welcome-page">
+            <div class="welcome">Welcome!</div>
+            <div class="content">
+                 To MovieFlix<br>A One-Stop Solution To Select Your Next To-Watch Movie
+            </div>
+            <div class="getStarted">
+                <button onclick=gotologinpage()>Get Started</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="last-page-content">
+        <div class="watch-on-tv">
+            <div class="content">
+                <p class="heading" style=" font-weight: 600;font-family: Montserrat;margin-bottom: 20px;">Enjoy on your TV</p>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+
+            <!-- css link for the tv animation are at "tv-animation.css" that is linked at the top -->
+            <div class="animation">
+                <div class="tvIMG"></div>
+                <div class="animation-slider">
+                    <div class="animation-slide">
+                        <div class="slides1"></div>
+                        <div class="animation-info">
+                            <div class="animation-content">Get All Animation Movies</div>
+                        </div>
+                    </div>
+                    <div class="animation-slide">
+                        <div class="slides2"></div>
+                        <div class="animation-info">
+                            <div class="animation-content">MovieFlix is the place of Romance and Love</div>
+                        </div>
+                    </div>
+                    <div class="animation-slide">
+                        <div class="slides3"></div>
+                        <div class="animation-info">
+                            <div class="animation-content">Get All Kind Of Genre Movies</div>
+                        </div>
+                    </div>
+                    <div class="animation-slide">
+                        <div class="slides4"></div>
+                        <div class="animation-info">
+                            <div class="animation-content">Get All Tranding Hindi Movies Also</div>
+                        </div>
+                    </div>
+                    <div class="animation-slide">
+                        <div class="slides5"></div>
+                        <div class="animation-info">
+                            <div class="animation-content">Get All Popular Bengali Movies Here</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="Download">
+
+            <div class="downloading-section">
+                <div class="download-bar">
+                    <div class="downloading-img"></div>
+                    <div class="downloading-content">
+                        <p style="font-size: 16px;font-family: Arial, Helvetica, sans-serif;color: white;font-weight: 600;">Stranger Things</p>
+                        <p style="font-size: 12px;color: blue;padding-top: 2px;">Downloading...</p>
+                    </div>
+                    <div class="downloading-animation"></div>
+                </div>
+            </div>
+
+            <div class="content">
+                <p class="heading"  style="font-weight: 600;font-family: Montserrat;margin-bottom: 20px;">Download your shows to watch offline</p>
+                <p>Save your favourites easily and always have something to watch.</p>
+            </div>
+            
+        </div>
+    
+        <div class="kids-profile">
+            <div class="content">
+                <p class="heading" style="font-weight: bold;font-family: Montserrat;">Create profiles for kids</p>
+                <p>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+            </div>
+            <div class="kids-img"></div>
+        </div>
+    </div>
+    
+
+<script src="welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,880 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+  /* scroll bar stylling */
+::-webkit-scrollbar{
+    width: 0.5rem;
+    height:0.5rem;
+}
+::-webkit-scrollbar-button{
+    color: red;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(27, 27, 27);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 51, 51);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(72, 72, 72);
+}
+
+/* header stylling */
+header{ 
+    height:25px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    justify-content: left;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+/* nameIMG stylling */
+.nameIMG{
+    height: 30px;
+    width: 110px;
+    background-image: url(name_img.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left: 3%; 
+    cursor: pointer;
+    
+}
+
+
+
+.section{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+    margin-left: 8%;
+}
+.section a{
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(112, 111, 111);
+    text-decoration: none;
+}
+.section a:hover{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(175, 175, 175);
+}
+.account-settings{
+    z-index: 1000;
+    width: 0;
+    height: auto;
+    background-color: rgba(255, 255, 255 , 0.8);
+    position: fixed;
+    top: 40px;
+    right: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -5px 3px 5px grey;
+}
+.account-settings a{
+    padding: 5px 0px;
+    padding-right: 35px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.account-settings a:hover{
+    background-color: rgb(139, 139, 139);
+}
+#updateName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menuBTN{
+    position: absolute;
+    top: 10px;
+    right: 22%;
+    width: 0px;
+    height: 0px;
+    background-image: url(menubar1.png);
+    background-size: contain;
+    cursor: pointer;
+}
+.searchBTN{
+    position: absolute;
+    top: 13px;
+    right: 250px;
+    height: 18px;
+    width:18px;
+    background-image: url(search_icon.png);
+    background-size: contain;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 400ms ;
+}
+.searchBTN:hover{
+    opacity: 1;
+}
+
+
+.searchbar{
+    height:35px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: visible;
+    position: fixed;
+    top: 0.4rem;
+    right: 1rem;
+}
+#form{
+    height:35px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: visible;
+    position: fixed;
+    top: 0.4rem;
+    right: 1rem;
+}
+#search{
+    height: 20px;
+    width: 90%;
+    font-family:arial;
+    font-size: 0.8rem;
+    background-color:rgb(83, 83, 83);
+    text-align: center;
+    font-weight: 100;
+    border-style: none;
+    border-radius: 7px;    
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    outline: none;
+}
+#search:hover{
+    background-color: rgb(116, 116, 116);
+    border-style: none;
+}
+#search:focus{
+    border-style: none;
+}
+::placeholder{
+    color:  rgb(0, 0, 0);      
+}
+
+
+/* nav sidebar stylling */
+
+
+.sideNavBar1{
+    height:93%;
+    width: 15%;
+    position:fixed;
+    left: 0;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.sideNavBar1 .NavBarHeading{
+    height: 4%;
+    width: 100%;
+    padding-left: 4%;
+    padding-top: 0;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.sideNavBar1 .categories{
+    height: 4%;
+    width: auto;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+.sideNavBar1 .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    margin-left: 20%;
+    text-decoration: none;
+}
+.sideNavBar1 .categories a:hover{
+    font-weight: 800;
+    color: rgb(151, 151, 151);
+}
+.sideNavBar1 .copyright{
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(100, 100, 100);
+    padding-left: 0.5rem;
+}
+
+
+
+.sideNavBar{
+    width: 0;
+    height: 0;
+}
+.sideNavBar.active{
+    z-index: 1000;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    width: 80%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding:5px 0px;
+    padding-bottom: 10px;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+.sideNavBar.active .genre{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.genre .NavBarHeading{
+    padding-left: 25%;
+    padding-top: 5px;
+    background-color: black;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+#category{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0px;
+}
+#category .categories{
+    width: 30%;
+    height: auto;
+}
+.genre #category .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    text-decoration: none;
+    padding-left: 5px;
+}
+.genre #category .categories a:hover{
+    font-weight: 800;
+    color: rgb(151, 151, 151);
+}
+.sideNavBar.active .language-account-copyright{
+    width: 30%;
+    height: auto;
+}
+.language-account-copyright .language{
+    width: 100%;
+    height:auto;
+    margin-bottom: 20px;
+}
+.language .NavBarHeading{
+    padding-top: 5px;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.language .categories{
+    width: 100%;
+    height: auto;
+}
+.language .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    margin-left: 20%;
+    text-decoration: none;
+}
+.language-account-copyright .account{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.language-account-copyright .account i{
+    overflow: hidden;
+}
+.language-account-copyright .copyright{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(119, 118, 118);
+}
+
+
+.movie{
+    height: auto;
+    width: 85%;
+    position: absolute;
+    top: 30px;
+    left: 15%;
+    background-image: linear-gradient(to right, black, rgb(36, 0, 0));
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom:1px solid gray ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+.movie-wrapper{
+    height: auto;
+    width: 100%;
+    top: 30px;
+    left: 15%;
+    background-color: transparent;
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom:1px solid gray ;
+    overflow: hidden;
+}
+.movie-wrapper .heading{
+    height: auto;
+    width: 100%;
+    background-image: linear-gradient(to bottom , black , rgb(16, 16, 16) , transparent);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    padding-left: 0;
+    padding-top: 30px;
+    padding-bottom: 0;
+    overflow: visible;
+    letter-spacing: 3px;
+}
+.movie-list{
+    height: auto;
+    width:100%;
+    background-color:transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    /* transform: translateX(0); */
+    transition: 800ms all ease-in-out;
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-left: 0;
+    margin-bottom: 0;
+    column-gap: 10px;
+}
+.movie-item{
+    width:120px;
+    height: auto;
+    background-image: linear-gradient(to bottom , black,black ,black , transparent);
+    overflow: visible;
+    position: relative;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 2.5rem;
+    margin-right: 0;
+}
+.movie-item img{
+    width: 100%;
+    height: 180px;
+    z-index: 750;
+    border-style: none;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+}
+.movie-item:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+.movie-item:hover .movie-image{
+    border-radius: 10px; 
+    opacity: 0.6;
+    z-index: 800;
+}
+.movie-item:hover .description{
+    width: 98%;
+    height: auto;
+}
+.movie-item:hover .movie-name{
+    width: 0;
+    height: 0;
+}
+.movie-item:hover .ratingAndYear{
+    width: 0;
+    height: 0;;
+} 
+.description{
+    width: 0;
+    height: 0;
+    z-index: 800;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+}
+.description .name{
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+.description .overview{
+    max-height: 48px;
+    font-size: 8px;
+    font-weight: lighter;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    overflow-y: hidden;
+}
+.description .watch{
+    color: white;
+    width: 90%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    justify-content: space-between;
+}
+.description .watch button{
+    height: auto;
+    width:auto;
+    background-color: red;
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+    border-style: none;
+    padding: 5%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.description .watch span{
+    height: auto;
+    width: 45%;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+}
+.movie-name{
+    width: 90%;
+    overflow: hidden;
+    height: auto;
+    font-size: 15px;
+    font-family: open sans;
+    font-weight: 400;
+    color: white;
+    padding-left: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 8px;
+    overflow-x: hidden;
+}
+.ratingAndYear{
+    height: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    transition-property: all;
+}
+.ratingAndYear .rating{
+    height: auto;
+    width: auto;
+    font-size: 0.7rem;
+    color: white;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+.ratingAndYear .year{
+    height:auto;
+    width: auto;
+    font-size: 1rem;
+    background-color: grey;
+    color:rgb(0, 0, 0);
+    margin-right: 10%;
+    font-family: open sans;
+    overflow: hidden;
+    align-items: center;
+    overflow: hidden;
+}
+.load-more{
+    position: relative;
+    width: auto;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color: red;
+    width: auto;
+    height: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    border-style: none;
+}
+.rating.green{
+    color: rgb(0, 255, 0);
+}
+.rating.orange{
+    color: orange;
+}
+.rating.red{
+    color: red;
+}
+.description .watch .green{
+    color: rgb(0, 255, 0);
+}
+.description .watch .orange{
+    color: orange;
+}
+.description .watch .red{
+    color: red;
+}
+
+@media only screen and (max-width: 1000px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .nameIMG{
+        margin-left:1%;
+    }
+    .section{
+        width: auto;
+        margin-left: 5%;
+        gap: 15px;
+    }
+    .sideNavBar1 .categories a{
+        font-size: 13px;
+        margin-left: 10%;
+    }
+    .sideNavBar1 .NavBarHeading{
+        padding-left: 0%;
+        font-size: 1.1rem;
+        width: 200px;
+    }
+    .sideNavBar1{
+        width: 12%;
+    }
+    .sideNavBar1 .copyright{
+        padding-left: 0;
+    }
+}
+
+
+@media only screen and (max-width:900px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        left: 445px;
+    }
+    .menuBTN{
+        width: 30px;
+        height: 30px;
+    }
+    .sideNavBar1{
+        height: 0;
+        width: 0;
+    }
+    .movie{
+        height: auto;
+        width: 100%;
+        left: 0;
+    }
+    .movie-wrapper .heading{
+        padding-left: 15px;
+    }
+}
+
+
+@media only screen and (max-width:750px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        left: 435px;
+    }
+    .searchbar{
+        height:0;
+        width: 0;
+    }
+    .searchBTN{
+        height:20px;
+        width: 20px;
+        cursor: pointer;
+        top: 16px;
+    }
+    .menuBTN{
+        top: 15px;
+        width: 22px;
+        height: 22px;
+        right: 90px;
+    }
+    .genre .NavBarHeading{
+        font-size: 15px;
+    }
+    .genre #category .categories a{
+        font-size: 11px;
+    }
+    .language .NavBarHeading{
+        font-size: 15px;
+    }
+    .language .categories a{
+        font-size: 11px;
+    }
+    .language-account-copyright .account{
+        font-size: 15px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 15px;
+    }
+    #form{
+        height:0;
+        width: 0;
+    }
+    #search{
+        height: 0;
+        width: 0;
+    }
+    .movie-wrapper .heading{
+        font-size: 20px;
+    }
+    .sectionType.active a{
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width:620px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        top :50px;
+        left: auto;
+        right: 40px;
+    }
+    .account-settings a{
+        font-size: 11px;
+    }
+    .searchBTN{
+        width: 15px;
+        height: 15px;
+        top: 13px;
+    }
+    .sideNavBar.active{
+        top: 45px;
+    }
+    .sideNavBar.active .genre{
+        width: 68%;
+    }
+    #category .categories{
+        width: 33%;
+        height: auto;
+    }
+    .genre #category .categories a{
+        font-size: 10px;
+    }
+    .sideNavBar.active .language-account-copyright{
+        width: 32%;
+    }
+    .language-account-copyright .account{
+        font-size: 15px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 15px;
+    }
+    .menuBTN{
+        right: 90px;
+        width: 15px;
+        height: 15px;
+        top: 12px;
+    }
+    .section{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 29px;
+        right: 10%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .section a{
+        font-size: 10px;
+    }
+    .section a:hover{
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width:450px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        right: 0px;
+        top: 45px;
+        border-radius: 6px;
+    }
+    .account-settings a{
+        font-size: 8px;
+        padding: 3px 11px;
+    }
+    ::-webkit-scrollbar{
+        width: 5px;
+        height: 5px;
+    }
+    .nameIMG{
+        height: 20px;
+        width: 90px;
+    }
+    .section{
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 98%;
+        display: flex;
+        height: auto;
+        margin-left: 0%;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .section a{
+        font-size:8px;
+    }
+    .section a:hover{
+        font-size: 8.2px;
+    }
+    
+    .sideNavBar.active{
+        top: 45px;
+        padding-top: 0;
+        width: 100%;
+    }
+    .sideNavBar.active .genre{
+        width: 68%;
+    }
+    #category .categories{
+        width: 33%;
+        height: 15px;
+        overflow: hidden;
+    }
+    .genre .NavBarHeading{
+        font-size: 12px;
+    }
+    .genre #category .categories a{
+        font-size: 8px;
+    }
+    .sideNavBar.active .language-account-copyright{
+        width: 32%;
+    }
+    .language .NavBarHeading{
+        font-size: 12px;
+    }
+    .language .categories{
+        width: 100%;
+        font-size: 15px;
+    }
+    .language .categories a{
+        font-size: 8px;
+    }
+    .language-account-copyright .account{
+        font-size: 10px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 10px;
+    }
+    .account-settings1{
+        top: 170px;
+    }
+    .account-settings1 a {
+        font-size: 12px;
+    }
+    .movie-wrapper .heading{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+
+@media (max-width:250px){
+    body{
+        background-color: rgb(3, 209, 255);
+    }
+}

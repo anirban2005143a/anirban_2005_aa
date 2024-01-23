@@ -1,0 +1,374 @@
+
+<html>
+<head>
+    <link rel="icon" href="icon_image.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="movie-details.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+
+    <!-- link for font font-awesome --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <!-- google font family css link --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Libre+Baskerville&family=Libre+Franklin:wght@100;500&family=Lora&family=Merriweather:wght@300&family=Montserrat:wght@100&family=PT+Sans&family=Playfair+Display&family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- webpage name  image -->
+        <div onclick="getindexpage()" class="nameIMG"></div>
+
+        <!-- different section -->
+        <div class="section">
+            <div class="sectionType"><a href="movies.html">MOVIES</a></div>
+            <div class="sectionType"><a href="tv-shows.html">TV SERIES</a></div>
+            <div class="sectionType"><a href="popular.html" >POPULAR</a></div>
+            <div class="sectionType"><a href="tranding.html">TRENDING</a></div>
+            <div class="account sectionType" id="updateName" style="cursor: pointer;"><a><i class="fa-solid fa-user" style="color: #bdbdbd;"></i></a></div>
+            <input id="hello" style="display: none;" value="hello">
+
+        </div>
+        
+        
+        <div class="menuBTN" onclick="showMenuBar()"></div>
+        <div class="searchBTN" onclick="showSearchBar()"></div>
+
+        <!-- //search button -->
+        <!-- <div class="searchbar">
+            <form id="form"><input id="search" style="border-style: none;" placeholder="Search Your Movie"></form>   
+        </div> -->
+
+    </header>
+
+
+    <div class="account-settings">
+        <a href="log-in.html" class="sign-out" id="Sign-Out">Sign-out</a>
+        <a href="wishlist.html" href="#" class="wishlist">Wishlist</a>
+        <a href="account-settings.html" class="settings">Settings</a>
+        <a href="rating.html" class="settings">Ratings</a>
+    </div>
+
+
+    <!-- side navbar -->
+    <nav>
+        <div class="sideNavBar1">
+        
+            <!-- different categories -->
+            <div class="NavBarHeading">Genre</div>
+            <div class="categories"><a href="adventure.html">Adventure</a></div>
+            <div class="categories"><a href="fanteny.html">Fantasy</a></div>
+            <div class="categories"><a href="animation.html">Animation</a></div>
+            <div class="categories"><a href="darma.html">Drama</a></div>
+            <div class="categories"><a href="horror.html">Horror</a></div>
+            <div class="categories"><a href="action.html">Action</a></div>
+            <div class="categories"><a href="comedy.html">Comedy</a></div>
+            <div class="categories"><a href="history.html">History</a></div>
+            <div class="categories"><a href="western.html">Western</a></div>
+            <div class="categories"><a href="thriller.html">Thriller</a></div>
+            <div class="categories"><a href="crime.html">Crime</a></div>
+            <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+            <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+            <div class="categories"><a href="mistry.html">Mystery</a></div>
+            <div class="categories"><a href="music.html">Music</a></div>
+            <div class="categories"><a href="romance.html">Romance</a></div>
+            <div class="categories"><a href="family.html">Family</a></div>
+            <div class="categories"><a href="war.html">War</a></div>
+           
+            <!-- choose your language -->
+            <div class="NavBarHeading">Language</div>
+            <div class="categories"><a href="english.html">English</a></div>
+            <div class="categories"><a href="hindi.html">Hindi</a></div>
+            <div class="categories"><a href="bengali.html">Bengali</a></div>
+            <!-- user account -->
+            <div class="copyright">movieflix@265aa</div>
+
+        </div>
+
+        <div class="sideNavBar"> 
+            <div class="genre">
+                <div class="NavBarHeading">Genre</div>
+                <div id="category">
+                    <div class="categories"><a href="adventure.html">Adventure</a></div>
+                <div class="categories"><a href="fanteny.html">Fantasy</a></div>
+                <div class="categories"><a href="animation.html">Animation</a></div>
+                <div class="categories"><a href="darma.html">Drama</a></div>
+                <div class="categories"><a href="horror.html">Horror</a></div>
+                <div class="categories"><a href="action.html">Action</a></div>
+                <div class="categories"><a href="comedy.html">Comedy</a></div>
+                <div class="categories"><a href="history.html">History</a></div>
+                <div class="categories"><a href="western.html">Western</a></div>
+                <div class="categories"><a href="thriller.html">Thriller</a></div>
+                <div class="categories"><a href="crime.html">Crime</a></div>
+                <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+                <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+                <div class="categories"><a href="mistry.html">Mystery</a></div>
+                <div class="categories"><a href="music.html">Music</a></div>
+                <div class="categories"><a href="romance.html">Romance</a></div>
+                <div class="categories"><a href="family.html">Family</a></div>
+                <div class="categories"><a href="war.html">War</a></div>
+                </div>
+            </div>
+            <div class="language-account-copyright">
+                <div class="language">
+                    <div class="NavBarHeading">Language</div>
+                    <div class="categories"><a href="english.html">English</a></div>
+                    <div class="categories"><a href="hindi.html">Hindi</a></div>
+                    <div class="categories"><a href="bengali.html">Bengali</a></div>
+                </div>
+                <div class="copyright">movieflix@265aa</div>
+            </div>
+            
+        </div>
+    </nav>
+
+    
+    <div class="main-content">
+        <!-- <img class="backgroundImage" src="banner 5.jpeg"> -->
+
+        <div class="container">
+            <div class="pagebackground">
+                <div class="backdrop-path"></div>
+            </div>
+            <div class="movie-img">
+                <img src="default poster png.png">
+            </div>
+            <div class="movie-description" >
+                <div class="description-movie-img">
+                  <img src="${img_url + data.poster_path}">
+                </div>
+                <div class="shadow">        
+                <div class="movie-name">${data.title}</div>
+                    <div class="rate-time-year"><i style="overflow: hidden;color: #fbff00;" class="fa-solid fa-star">&nbsp;</i>${data.vote_average.toFixed(1)} &nbsp;. &nbsp; ${data.runtime}min &nbsp; . &nbsp; ${data.release_date.split("-")[0]}</div>
+                    <div class="category">${getgenrelist(data.genres)}</div>
+                    <div class="overview">${data.overview}</div>
+                    <div class="starring">
+                        <div class="heading">Starring: </div>
+                        <div class="content">${getCastList(data.casts.cast)}</div>
+                    </div>
+                    <div class="drector">
+                        <div class="director-heading">Directed By:</div>
+                        <div class="director-name">${getDirector(data.casts.crew)}</div>
+                    </div>
+                </div>
+                
+                <div class="watchmovie">
+                    <button ><img src="playbutton.png">Watch Now</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="wishlist-rating">
+            <input id="image" class="movie-info">
+            <input id="movie-name" class="movie-info">
+            <input id="overview" class="movie-info">
+            <input id="rating" class="movie-info">
+            <input id="yearOfRelease" class="movie-info">
+            <input id="idOfMovie" class="movie-info">
+            <button id="insert">
+            Watch Later
+            </button>
+
+            <button id="custom-rating">
+                <i class="fa-solid fa-star customInput"></i>
+                <i class="fa-solid fa-star customInput"></i>
+                <i class="fa-solid fa-star customInput"></i>
+                <i class="fa-solid fa-star customInput"></i>
+                <i class="fa-solid fa-star customInput"></i>
+                <div id="thank">Thankyou for rating</div>
+            </button>
+            <input id="User-Rating" class="rating-mark">
+        </div>
+
+        <p class="castlist">Casts list</p>
+        <div class="castimages">
+            <div class="notsavedforCast">
+                <img src="emoji.webp">Uppss.... casts can't be showed!!!
+            </div>
+        </div>
+            
+        <div class="relatedvideos">
+            <div class="heading">Related Trailers And Teasers</div>
+            <div class="notsaved">
+                <img src="upset.png">Uppss.... You didn't rate any series!!!
+            </div>
+            <div class="videos">
+            </div>
+        </div>
+
+    
+        <div class="suggetions">
+            
+                <div class="heading">
+                    you may also like
+                </div>
+                
+                <div class="movie-list">
+                    <div class="movie-item">
+                        <div class="movie-image"><img src="poster 3.jpeg"></div>
+                        <div class="description">
+                            <div class="heading">dhcvbdh cfgb bdf rt rstgsdb rgsrg</div>
+                            <div class="overview"></div>
+                            <div class="watch-rate"><button onclick="">Watch</button><span><i class="fa-solid fa-star" style="color: #fbff00;"></i>8.9</span></div>
+                        </div>
+                        <div class="movie-name-year-rate">
+                            <div class="movie-name">black panther : wakanda forever</div>
+                            <div class="rate-year">
+                                <div class="rate"><i class="fa-solid fa-star" style="color: #fbff00;"></i>&nbsp;8.9</div>
+                                <div class="release-year">2019</div>
+                            </div>
+                        </div>
+                    </div>    
+                    
+                </div>
+            
+        </div>
+    
+    </div>
+
+
+    
+
+    <script src="movie-details.js"></script> 
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase , ref , set , get , child } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyACFoTUxtBAzWHg4c1-2vC9UAumSmmzjnY",
+      authDomain: "movieflix-c7a43.firebaseapp.com",
+      databaseURL: "https://movieflix-c7a43-default-rtdb.firebaseio.com",
+      projectId: "movieflix-c7a43",
+      storageBucket: "movieflix-c7a43.appspot.com",
+      messagingSenderId: "289003154218",
+      appId: "1:289003154218:web:9a994bece8172785824c53",
+      measurementId: "G-F52DXVS77G"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const dbref = ref(db);
+
+
+    let insert = document.getElementById("insert")
+    // console.log(insert)
+
+    let ratingStar = document.getElementById("custom-rating")
+    // console.log(ratingStar)
+
+    let bv = window.localStorage.getItem("user-id")
+    console.log(bv)
+
+    window.addEventListener("load" , ()=>{
+
+        setTimeout(()=>{
+            
+        const av = document.getElementById("movie-name").value
+        console.log(av)
+        window.localStorage.setItem("RatedMovieName" , String(av))
+        get(child(dbref, `Users/${bv}/userRating/${av}/userRating/`)).then((movie)=>{
+                let key = movie.key
+                let value = movie.val()
+    
+                console.log(key , value)
+    
+                let rating = value
+                console.log(rating)
+    
+                let customInput = document.getElementsByClassName("customInput")
+                console.log(customInput)
+    
+                for(let i = 0; i<rating ; i++){
+                    customInput[i].classList.add("clicked")
+                }
+    
+            })
+    
+    
+        get(child(dbref, `Users/${bv}/movie/`)).then((movie)=>{
+            let key = movie.key
+            let value = movie.val()
+            console.log(key , value)
+    
+            movie.forEach((item)=>{
+                let key1 = item.key
+    
+                if(key1 == `${av}`){
+                    insert.innerHTML = `<i class="fa-regular fa-circle-check" style="color: #04ff00;"></i>&nbsp;Saved`
+                }
+            })
+           
+        })
+
+        
+        },500)
+        
+    })
+    
+
+    // window.localStorage.setItem("RatedMovieName" , String(av))
+
+        // Attach the event listener to the button
+        insert.addEventListener("click", function (e) {
+            e.preventDefault();0
+
+            set(ref(db, `Users/${bv}/movie/` + document.getElementById("movie-name").value), {
+                imageofMovie: document.getElementById("image").value,
+                nameofMovie: document.getElementById("movie-name").value,
+                overviewofMovie: document.getElementById("overview").value,
+                ratingofMovie: document.getElementById("rating").value,
+                releaseyearofMovie: document.getElementById("yearOfRelease").value,
+                idOfMovie : document.getElementById("idOfMovie").value
+            })
+            .then(()=>{
+                insert.innerHTML = `<i class="fa-regular fa-circle-check" style="color: #04ff00;"></i>&nbsp;Saved`
+            })
+            
+            console.log(document.getElementById("movie-name").value)
+        });
+
+
+        Array.from(document.getElementsByClassName("customInput")).forEach((ratingStar)=>{
+            ratingStar.addEventListener("click", function (e) {
+                e.preventDefault();
+                let ab = window.localStorage.getItem("userRating")
+    
+                let as = document.getElementById("User-Rating")
+                as.setAttribute("value" , (ab))
+    
+                set(ref(db, `Users/${bv}/userRating/` + document.getElementById("movie-name").value), {
+                    imageofMovie: document.getElementById("image").value,
+                    nameofMovie: document.getElementById("movie-name").value,
+                    userRating: document.getElementById("User-Rating").value,
+                    idOfMovie : document.getElementById("idOfMovie").value
+                })
+                .then(()=>{
+                    console.log(document.getElementById("User-Rating").value)
+                    thank.style.width = "auto"
+                    thank.style.padding = "3px 5px"
+                    thank.style.border = "2px solid lime"
+                    console.log(idOfMovie.value)
+                })
+            })
+        })
+           
+            
+            let username = window.localStorage.getItem("username")
+            updateName.innerHTML=`${username}`
+
+
+  </script>
+
+
+</body>
+</html>

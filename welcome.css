@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    transform: translateY(-30px);
+}
+  /* scroll bar stylling */
+::-webkit-scrollbar{
+    width:5px;
+    height:5px;
+}
+::-webkit-scrollbar-button{
+    color: red;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(27, 27, 27);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 51, 51);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(72, 72, 72);
+}
+
+/* header stylling */
+.header{
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: visible;
+    padding-top: 1.5rem;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+/* nameIMG stylling */
+.nameIMG{
+    height: 2.5rem;
+    width: 10rem;
+    background-image: url(name_img.png);
+    background-size:cover;
+    margin-left: 1.7rem;
+}
+.language{
+    height: 75%;
+    width: auto;
+    background-color: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    border: 1px solid rgb(66, 66, 66);
+    border-radius: 0.4rem;
+    color: white;
+}
+.language:focus{
+    border: 2px solid grey;
+    transform: scale(1.01);
+    color: red;
+}
+.signUp{
+    width:auto;
+    height: 78%;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    border-style: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.language-and-login{
+    width: 250px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.page-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(signin\ page\ background.jpg);
+    background-position:center;
+    background-size: cover;
+    opacity: 0.5;
+}
+.page-shadow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,black , transparent, transparent);
+}
+.mid-page-content{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.welcome-page{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+}
+.welcome-page .welcome{
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+.welcome-page .content{
+    width: auto;
+    height: auto;
+    font-size:2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.getStarted{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+button{
+    height: auto;
+    width: auto;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#last-page-content{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(56, 56, 56);
+}
+.heading{
+    font-size: 2.5rem;
+}
+.watch-on-tv{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+.watch-on-tv .content{
+    width: 35%;
+    height: auto;
+    font-size: 1.3rem;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 8%;
+    margin-left: 25px;
+}
+.Download{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.Download .content{
+    width: 45%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.Watch-everywhere{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+}
+.Watch-everywhere .content{
+    width: auto;
+    height: auto;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+}
+.kids-profile{
+    width: 100%;
+    height: 480px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.kids-profile .content{
+    width: 40%;
+    height: auto;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+}
+.kids-img{
+    width: 50%;
+    height: 100%;
+    background-image: url(child.png);
+    margin-left: 0px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width:750px) {
+    .mid-page-content {
+        top: 40%;
+    }
+    .welcome-page .welcome {
+        font-size: 3rem;
+    }
+    .welcome-page .content {
+        font-size: 1.5rem;
+    }
+    button {
+        font-size: 20px;
+    }
+    .watch-on-tv .content {
+        font-size: 15px;
+    }
+    .Download .content {
+        font-size: 15px;
+        text-align: left;
+        margin-right: 0;
+    }
+    .kids-profile .content {
+        font-size: 15px;
+    }
+    
+}
+
+
+@media only screen and (max-width:550px){
+    .watch-on-tv {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .watch-on-tv .content {
+        width: 95%;
+        margin-top: 0;
+    }
+    .Download{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Download .content {
+        width: 95%;
+        margin-top: 0;
+        padding-left: 15px;
+    }
+    .heading{
+        font-size: 25px;
+    }
+    .nameIMG{
+        height: 25px;
+        width: 100px;
+        background-image: url(name_img.png);
+        background-size:cover;
+        margin-left: 15px;
+    }
+    .language-and-login{
+        width: 170px;
+        height: 30px;
+        background-color: transparent;
+        display: flex;
+        column-gap: 10px;
+    }
+    .language {
+        height: 100%;
+        width: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 15px;
+    }
+    .signUp {
+        height: 100%;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 7px;
+    }
+}
+
+
+@media only screen and (max-width:420px){
+    .kids-profile{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .kids-profile .content {
+        width: 95%;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+    .kids-img{
+        height: 200px;
+    }
+    .nameIMG {
+        height: 24px;
+        width: 100px;
+        background-image: url(name_img.png);
+        background-size: contain;
+        margin-left: 0px;
+        margin-top: 0;
+        position: absolute;
+        top: 10px;
+        background-repeat: no-repeat;
+    }
+    .language-and-login{
+        width: 100%;
+    }
+    .watch-on-tv .content {
+        margin-left: 0;
+    }
+    .language-and-login{
+        position: absolute;
+        top: 35px;
+    }
+}

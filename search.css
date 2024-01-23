@@ -1,0 +1,1088 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+  /* scroll bar stylling */
+::-webkit-scrollbar{
+    width: 0.5rem;
+    height:0.5rem;
+}
+::-webkit-scrollbar-button{
+    color: red;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(27, 27, 27);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 51, 51);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(72, 72, 72);
+}
+
+/* header stylling */
+header{ 
+    height:25px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    justify-content: left;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.nameIMG{
+    height: 30px;
+    width: 110px;
+    background-image: url(name_img.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left: 3%; 
+    cursor: pointer;  
+}
+
+
+.section{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+    margin-left: 8%;
+}
+.section a{
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(112, 111, 111);
+    text-decoration: none;
+}
+.section a:hover{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(175, 175, 175);
+}
+.account-settings{
+    z-index: 1000;
+    width: 0;
+    height: auto;
+    background-color: rgba(255, 255, 255 , 0.8);
+    position: fixed;
+    top: 40px;
+    right: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -5px 3px 5px grey;
+}
+.account-settings a{
+    padding: 5px 0px;
+    padding-right: 35px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.account-settings a:hover{
+    background-color: rgb(139, 139, 139);
+}
+#updateName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menuBTN{
+    position: absolute;
+    top: 10px;
+    right: 22%;
+    width: 0px;
+    height: 0px;
+    background-image: url(menubar1.png);
+    background-size: contain;
+    cursor: pointer;
+}
+.searchBTN{
+    position: absolute;
+    top: 13px;
+    right: 250px;
+    height: 13px;
+    width:18px;
+    background-image: url(search_icon.png);
+    background-size: contain;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 400ms ;
+}
+.searchBTN:hover{
+    opacity: 1;
+}
+.searchbar{
+    height:35px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: visible;
+    position: fixed;
+    top: 0.4rem;
+    right: 1rem;
+}
+#form{
+    height:35px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: visible;
+    position: fixed;
+    top: 0.4rem;
+    right: 1rem;
+}
+#search{
+    height: 20px;
+    width: 90%;
+    font-family:arial;
+    font-size: 0.8rem;
+    background-color:rgb(83, 83, 83);
+    text-align: center;
+    font-weight: 100;
+    border-style: none;
+    border-radius: 7px;    
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    outline: none;
+}
+#search:hover{
+    background-color: rgb(116, 116, 116);
+    border-style: none;
+}
+#search:focus{
+    border-style: none;
+}
+::placeholder{
+    color:  rgb(0, 0, 0);      
+}
+
+
+/* nav sidebar stylling */
+
+
+.sideNavBar1{
+    height:93%;
+    width: 15%;
+    position:fixed;
+    left: 0;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.sideNavBar1 .NavBarHeading{
+    height: 4%;
+    width: 100%;
+    padding-left: 4%;
+    padding-top: 0;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.sideNavBar1 .categories{
+    height: 4%;
+    width: auto;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+.sideNavBar1 .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    margin-left: 20%;
+    text-decoration: none;
+}
+.sideNavBar1 .categories a:hover{
+    font-weight: 800;
+    color: rgb(151, 151, 151);
+}
+.sideNavBar1 .copyright{
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(100, 100, 100);
+    padding-left: 0.5rem;
+}
+
+
+
+.sideNavBar{
+    width: 0;
+    height: 0;
+}
+.sideNavBar.active{
+    z-index: 1000;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    width: 80%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding:5px 0px;
+    padding-bottom: 10px;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+.sideNavBar.active .genre{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.genre .NavBarHeading{
+    padding-left: 25%;
+    padding-top: 5px;
+    background-color: black;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+#category{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0px;
+}
+#category .categories{
+    width: 30%;
+    height: auto;
+}
+.genre #category .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    text-decoration: none;
+    padding-left: 5px;
+}
+.genre #category .categories a:hover{
+    font-weight: 800;
+    color: rgb(151, 151, 151);
+}
+.sideNavBar.active .language-account-copyright{
+    width: 30%;
+    height: auto;
+}
+.language-account-copyright .language{
+    width: 100%;
+    height:auto;
+    margin-bottom: 20px;
+}
+.language .NavBarHeading{
+    padding-top: 5px;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.language .categories{
+    width: 100%;
+    height: auto;
+}
+.language .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    margin-left: 20%;
+    text-decoration: none;
+}
+.language-account-copyright .account{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.language-account-copyright .account i{
+    overflow: hidden;
+}
+.language-account-copyright .copyright{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(119, 118, 118);
+}
+
+/* movie wrapper stylling */
+
+.movie-wrapper{
+    height: auto;
+    width: 85%;
+    position: absolute;
+    top: 30px;
+    left: 15%;
+    background-image: linear-gradient(to right, black, rgb(36, 0, 0));
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom:1px solid gray ;
+    overflow: hidden;
+}
+.movie-wrapper .heading{
+    height: auto;
+    width: 100%;
+    background-image: linear-gradient(to bottom , black  , transparent);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(220, 220, 220);
+    font-weight: 900;
+    padding-left: 2rem;
+    padding-top: 1.3rem;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+    letter-spacing: 2px;
+}
+.movie-list{
+    height: auto;
+    width:100%;
+    background-color:transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    transition: 800ms all ease-in-out;
+    overflow: hidden;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    column-gap: 18px;
+}
+.movie-item{
+    width:150px;
+    height: auto;
+    background-image: linear-gradient(to bottom , black,black ,black , transparent);
+    overflow: visible;
+    position: relative;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+}
+.movie-item img{
+    width: 100%;
+    height: 210px;
+    z-index: 750;
+    border-style: none;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+.movie-item:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+    border-radius: 20px;
+    overflow: visible;
+}
+.movie-item:hover .movie-image{
+    border-radius: 20px; 
+    opacity: 0.6;
+    z-index: 800;
+}
+.movie-item:hover .description{
+    opacity: 1;
+}
+.movie-item:hover .movie-name{
+    opacity: 0;
+}
+.movie-item:hover .ratingAndYear{
+    opacity: 0;
+} 
+.description{
+    width: 90%;
+    height: auto;
+    z-index: 800;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+}
+.description .name{
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+.description .overview{
+    max-height: 68px;
+    font-size: 0.6rem;
+    font-weight: lighter;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    overflow: hidden;
+}
+.description .watch{
+    color: white;
+    width: 70%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    justify-content: space-between;
+}
+.description .watch button{
+    height: auto;
+    width:auto;
+    background-color: red;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    text-align: center;
+    border-style: none;
+    padding: 5%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.description .watch span{
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+}
+.movie-name{
+    width: 95%;
+    height: auto;
+    overflow: hidden;
+    height: auto;
+    font-size: 1.2rem;
+    font-family: open sans;
+    font-weight: 400;
+    color: white;
+    padding-left: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 8px;
+    overflow-x: hidden;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+}
+.ratingAndYear{
+    height: auto;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+.ratingAndYear .rating{
+    height: auto;
+    width: auto;
+    font-size: 0.7rem;
+    color: white;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+.ratingAndYear .year{
+    height:auto;
+    width: auto;
+    font-size: 1rem;
+    background-color: grey;
+    color:rgb(0, 0, 0);
+    margin-right: 10%;
+    font-family: open sans;
+    overflow: hidden;
+    align-items: center;
+    padding: 0px 3px;
+}
+.load-more{
+    position: relative;
+    width: auto;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color: red;
+    width: auto;
+    height: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    border-style: none;
+}
+
+
+.rating.green{
+    color: rgb(0, 255, 0);
+}
+.rating.orange{
+    color: orange;
+}
+.rating.red{
+    color: red;
+}
+.description .watch .green{
+    color: rgb(0, 255, 0);
+}
+.description .watch .orange{
+    color: orange;
+}
+.description .watch .red{
+    color: red;
+}
+
+/* css stylling for responsiveness */
+
+@media only screen and (max-width: 1000px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .nameIMG{
+        margin-left:1%;
+    }
+    .section{
+        width: auto;
+        margin-left: 5%;
+        gap: 15px;
+    }
+    .sideNavBar1 .categories a{
+        font-size: 13px;
+        margin-left: 10%;
+    }
+    .sideNavBar1 .NavBarHeading{
+        padding-left: 0%;
+        font-size: 1.1rem;
+        width: 200px;
+    }
+    .sideNavBar1{
+        width: 12%;
+    }
+    .sideNavBar1 .copyright{
+        padding-left: 0;
+    }
+    .movie-item{
+        width:120px;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .movie-item img{
+        width: 100%;
+        height: 150px;
+    }
+    .movie-item:hover{
+        border-radius: 0px;
+    }
+    .movie-item:hover .movie-image{
+        border-radius: 10px; 
+        opacity: 0.4;
+    }
+    .description{
+        top: 25%;
+    }
+    .description .name{
+        font-size: 15px;
+    }
+    .description .overview{
+        font-size: 8.5px;
+        width: 90%;
+    }
+    .description .watch{
+        width: 90%;
+    }
+    .description .watch button{
+        border-radius: 8px;
+    }
+    .description .watch span{
+        align-items: center;
+    }
+    .movie-name{
+        width: 90%;
+        padding-left: 5%;
+        padding-bottom: 5px;
+        font-size: 15px;
+    }
+    .ratingAndYear{
+        width: 90%;
+        padding-left: 5%;
+    }
+    .ratingAndYear .rating{
+        font-size: 12px;
+    }
+    .ratingAndYear .year{
+        font-size: 12px;
+        padding: 0px 3px;
+        background-color: grey;
+    }
+}
+
+
+@media only screen and (max-width:900px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        left: 445px;
+    }
+    .menuBTN{
+        width: 30px;
+        height: 30px;
+    }
+    .sideNavBar1{
+        height: 0;
+        width: 0;
+    }
+    .sideNavBar.active{
+        width: 60%;
+    }
+    .genre .NavBarHeading{
+        font-size: 16px;
+    }
+    .genre #category .categories a{
+        font-size: 12px;
+    }
+    .language .NavBarHeading{
+        font-size: 16px;
+    }
+    .language .categories a{
+        font-size: 12px;
+    }
+    .language-account-copyright .account{
+        font-size: 16px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 16px;
+    }
+    .movie-wrapper{
+        width: 100%;
+        left: 0;
+    }
+    .movie-wrapper .heading{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .movie-item{
+        width:100px;
+        height: auto;
+        padding-bottom: 0;
+        overflow: visible;
+    }
+    .movie-item img{
+        width: 100%;
+        height: 140px;
+    }
+    .movie-item:hover{
+        border-radius: 0px;
+    }
+    .movie-item:hover .movie-image{
+        border-radius: 10px; 
+        opacity: 0.4;
+    }
+    .description{
+        top: 20%;
+    }
+    .description .name{
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+    .description .watch button{
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    .description .watch span{
+        align-items: center;
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width:750px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        left: 435px;
+    }
+    .section{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 15px;
+        left:88px;
+    }
+    .searchbar{
+        height:0;
+        width: 0;
+    }
+    .searchBTN{
+        width: 0px;
+        height: 0px;
+        top: 13px;
+    }
+    #form{
+        height:20px;
+        width: 130px;
+        right: 5px;
+        top: 15px;
+    }
+    #search{
+        height: 18px;
+        width: 100%;
+        font-size: 11px;
+        border-radius: 5px;    
+    }
+    #search:focus{
+        border-radius: 10px;
+        height:20px;
+    }
+    .menuBTN{
+        top: 15px;
+        width: 22px;
+        height: 22px;
+        right: 140px;
+    }
+    .sideNavBar.active{
+        width: 70%;
+    }
+    .genre .NavBarHeading{
+        font-size: 15px;
+    }
+    .genre #category .categories a{
+        font-size: 11px;
+    }
+    .language .NavBarHeading{
+        font-size: 15px;
+    }
+    .language .categories a{
+        font-size: 11px;
+    }
+    .language-account-copyright .account{
+        font-size: 15px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 15px;
+    }
+    .movie-list{
+        justify-content: space-evenly;
+        padding-left: 0rem;
+        column-gap: 10px;
+        padding: 0px 5px;
+    }
+    .movie-item{
+        padding-bottom: 0rem;
+        margin-bottom: 20px;
+        margin-right: 0rem;
+    }
+    .movie-wrapper .heading{
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    .movie-item{
+        width:100px;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .movie-item img{
+        width: 100%;
+        height: 140px;
+    }
+    .movie-item:hover{
+        border-radius: 10px;
+    }
+    .movie-item:hover .movie-image{
+        border-radius: 10px; 
+        opacity: 0.4;
+    }
+    .description{
+        top: 20%;
+    }
+    .description .name{
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+    .description .watch button{
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    .description .watch span{
+        align-items: center;
+        font-size: 12px;
+    }
+    .movie-name{
+        font-size: 12px;
+    }
+    .ratingAndYear .rating{
+        font-size: 10px;
+    }
+    .ratingAndYear .year{
+        font-size: 10px;
+    }
+}
+
+
+@media only screen and (max-width:620px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        top :50px;
+        left: auto;
+        right: 40px;
+    }
+    .account-settings a{
+        font-size: 11px;
+    }
+    header{ 
+        height:30px;
+    }
+    .menuBTN{
+        right: 15px;
+        top: 6.5px;
+    }
+    .searchBTN{
+        width: 0px;
+        height: 0px;
+        top: 13px;
+    }
+    #form{
+        height:20px;
+        width: 50%;
+        right: 60px;
+        top: 5px;
+    }
+    #search{
+        height: 18px;
+        width: 90%;
+        font-size: 12px;
+        border-radius: 10px;    
+    }
+    #search:focus{
+        border-radius: 10px;
+        height:20px;
+    }
+    .sideNavBar.active{
+        top: 45px;
+    }
+    .sideNavBar.active .genre{
+        width: 68%;
+    }
+    #category .categories{
+        width: 33%;
+        height: auto;
+    }
+    .genre #category .categories a{
+        font-size: 10px;
+    }
+    .sideNavBar.active .language-account-copyright{
+        width: 32%;
+    }
+    .language-account-copyright .account{
+        font-size: 15px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 15px;
+    }
+    .section{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 29px;
+        right: 10%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .section a{
+        font-size: 10px;
+    }
+    .section a:hover{
+        font-size: 11px;
+    }
+    .movie-wrapper .heading{
+       padding-left: 15px;
+       font-weight: 100;
+    }
+    button{
+        padding: 5px 8px;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media only screen and (max-width:450px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .account-settings{
+        right: 0px;
+        top: 45px;
+        border-radius: 6px;
+    }
+    .account-settings a{
+        font-size: 8px;
+        padding: 3px 11px;
+    }
+    ::-webkit-scrollbar{
+        width: 5px;
+        height: 5px;
+    }
+    .nameIMG{
+        height: 20px;
+        width: 90px;
+        top: 8px;
+        position: absolute;
+    }
+    #form{
+        height:15px;
+        width: 50%;
+        right: 20%;
+        top: 8px;
+    }
+    #search{
+        height: 15px;
+        width: 90%;
+        font-size: 8px;
+        border-radius: 5px;    
+    }
+    #search:focus{
+        border-radius: 5px;
+        height:16px;
+    }
+    .menuBTN{
+        right: 15px;
+        top: 7.5px;
+        width: 15px;
+        height: 15px;
+    }
+    .section{
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 96%;
+        display: flex;
+        height: auto;
+        margin-left: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .section a{
+        font-size:8px;
+    }
+    .section a:hover{
+        font-size: 8.2px;
+    }
+    
+    .sideNavBar.active{
+        top: 45px;
+        padding-top: 0;
+        width: 100%;
+    }
+    .sideNavBar.active .genre{
+        width: 68%;
+    }
+    #category .categories{
+        width: 33%;
+        height: 15px;
+        overflow: hidden;
+    }
+    .genre .NavBarHeading{
+        font-size: 12px;
+    }
+    .genre #category .categories a{
+        font-size: 8px;
+    }
+    .sideNavBar.active .language-account-copyright{
+        width: 32%;
+    }
+    .language .NavBarHeading{
+        font-size: 12px;
+    }
+    .language .categories{
+        width: 100%;
+        font-size: 15px;
+    }
+    .language .categories a{
+        font-size: 8px;
+    }
+    .language-account-copyright .account{
+        font-size: 10px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 10px;
+    }
+    .movie-wrapper .heading{
+        font-size:11.5px;
+    }
+    button{
+        padding: 5px 8px;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media (max-width:250px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+}

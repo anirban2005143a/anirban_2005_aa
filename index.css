@@ -1,0 +1,1870 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+  /* scroll bar stylling */
+::-webkit-scrollbar{
+    width: 5px;
+    height:5px;
+}
+::-webkit-scrollbar-button{
+    color: red;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(27, 27, 27);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 51, 51);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(72, 72, 72);
+}
+
+/* header stylling */
+header{ 
+    height:25px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    justify-content: left;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.nameIMG{
+    height: 30px;
+    width: 110px;
+    background-image: url(name_img.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-left: 3%;  
+    cursor: pointer;
+}
+
+
+.section{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+    margin-left: 8%;
+}
+.section a{
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(112, 111, 111);
+    text-decoration: none;
+}
+.section a:hover{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(175, 175, 175);
+}
+.account-settings{
+    z-index: 1000;
+    width: 0;
+    height: auto;
+    background-color: rgba(255, 255, 255 , 0.8);
+    position: fixed;
+    top: 40px;
+    right: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -5px 3px 5px grey;
+}
+.account-settings a{
+    padding: 5px 0px;
+    padding-right: 35px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.account-settings a:hover{
+    background-color: rgb(139, 139, 139);
+}
+#updateName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menuBTN{
+    position: absolute;
+    top: 10px;
+    right: 22%;
+    width: 0px;
+    height: 0px;
+    background-image: url(menubar1.png);
+    background-size: contain;
+    cursor: pointer;
+}
+.searchBTN{
+    position: absolute;
+    top: 13px;
+    right: 250px;
+    height: 18px;
+    width:18px;
+    background-image: url(search_icon.png);
+    background-size: contain;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 400ms ;
+}
+.searchBTN:hover{
+    opacity: 1;
+}
+
+
+.searchbar{
+    height:35px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: visible;
+    position: fixed;
+    top: 0.4rem;
+    right: 1rem;
+}
+#form{
+    height:35px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    overflow: visible;
+    position: fixed;
+    top: 0.4rem;
+    right: 1rem;
+}
+#search{
+    height: 20px;
+    width: 90%;
+    font-family:arial;
+    font-size: 0.8rem;
+    background-color:rgb(83, 83, 83);
+    text-align: center;
+    font-weight: 100;
+    border-style: none;
+    border-radius: 7px;    
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    outline: none;
+}
+#search:hover{
+    background-color: rgb(116, 116, 116);
+    border-style: none;
+}
+#search:focus{
+    border-style: none;
+}
+::placeholder{
+    color:  rgb(0, 0, 0);      
+}
+
+
+/* nav sidebar stylling */
+
+
+.sideNavBar1{
+    height:93%;
+    width: 15%;
+    position:fixed;
+    left: 0;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.sideNavBar1 .NavBarHeading{
+    height: 4%;
+    width: 100%;
+    padding-left: 4%;
+    padding-top: 0;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.sideNavBar1 .categories{
+    height: 4%;
+    width: auto;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+.sideNavBar1 .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    margin-left: 20%;
+    text-decoration: none;
+}
+.sideNavBar1 .categories a:hover{
+    font-weight: 800;
+    color: rgb(151, 151, 151);
+}
+.sideNavBar1 .copyright{
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(100, 100, 100);
+    padding-left: 0.5rem;
+}
+
+
+
+.sideNavBar{
+    width: 0;
+    height: 0;
+}
+.sideNavBar.active{
+    z-index: 1000;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    width: 80%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding:5px 0px;
+    padding-bottom: 10px;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
+.sideNavBar.active .genre{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.genre .NavBarHeading{
+    padding-left: 25%;
+    padding-top: 5px;
+    background-color: black;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+#category{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0px;
+}
+#category .categories{
+    width: 30%;
+    height: auto;
+}
+.genre #category .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    text-decoration: none;
+    padding-left: 5px;
+}
+.genre #category .categories a:hover{
+    font-weight: 800;
+    color: rgb(151, 151, 151);
+}
+.sideNavBar.active .language-account-copyright{
+    width: 30%;
+    height: auto;
+}
+.language-account-copyright .language{
+    width: 100%;
+    height:auto;
+    margin-bottom: 20px;
+}
+.language .NavBarHeading{
+    padding-top: 5px;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.language .categories{
+    width: 100%;
+    height: auto;
+}
+.language .categories a{
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    margin-left: 20%;
+    text-decoration: none;
+}
+.language .categories a:hover{
+    font-weight: 800;
+    color: rgb(151, 151, 151);
+}
+.language-account-copyright .account{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    color: rgb(119, 118, 118);
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.language-account-copyright .account i{
+    overflow: hidden;
+}
+.language-account-copyright .copyright{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(119, 118, 118);
+}
+
+/* css stylling for banner portion of the home page */
+
+.container{
+    position: relative;
+    left: 15%;
+    width: 85%;
+    height: 520px;
+    overflow-y: hidden;
+    margin-top: 20px;
+    border-bottom: 2px solid rgb(72, 72, 72);
+    opacity: 1;
+    background-size: 100% 100%;
+    margin-bottom: 15px;
+}
+.banne-slider{
+    position: relative;
+    top: 30px;
+    /* left: 18%; */
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+.slides{
+    height: 0;
+    width: 98%;
+    object-fit: cover;
+    overflow: hidden;
+    background-size: 100% 100%;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 2s;
+}
+.slides.active{
+    height:100%;
+    width: 98%;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-right-radius: 30px;
+    background-size: 100% 100%;
+    opacity: 1;
+}
+.information{
+    position: absolute;
+    width:80%;
+    height: 100%;
+    background-color: transparent;
+    top: 0px;
+    left:0;
+    overflow: hidden;
+}
+.banner-info{
+    height: 0;
+    width: 90%;
+    transition: all 2s;
+    opacity: 0;
+}
+.banner-info.active{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    opacity: 1;
+}
+.banner-info .headding{
+    width: 0;
+    height: 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    padding-top: 4rem;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+}
+.banner-info.active .headding{
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    padding-top: 4rem;
+    padding-bottom: 10px;
+    letter-spacing: 3px;
+    transition-duration: 400ms;
+}
+.banner-info .year-ratting{
+    width: 0;
+    height: 0;
+    display: flex;
+    flex-direction: left;
+    font-size: 1rem;
+    font-family: open sans;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(141, 141, 141);
+    margin-bottom: 20px;
+}
+.banner-info.active .year-ratting{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: left;
+    font-size: 1rem;
+    font-family: open sans;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(141, 141, 141);
+    margin-bottom: 20px;
+    transition-duration: 400ms;
+}
+.rating{
+    margin-right: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+.year{
+    margin-left: 5rem;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.banner-info .overview{
+    width: 0;
+    height: 0;
+    font-size: 1.1rem;
+    font-family: open sans;
+    font-weight: lighter;
+    text-align: left;
+    color: rgb(174, 174, 174);
+    padding-bottom: 20px;
+}
+.banner-info.active .overview{
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    font-size: 1.1rem;
+    font-family: open sans;
+    font-weight: lighter;
+    text-align: left;
+    color: rgb(174, 174, 174);
+    padding-bottom: 20px;
+    transition-duration: 400ms;
+}
+.banner-info .watch-movie{
+    width: 0;
+    height: 0;
+}
+.banner-info.active .watch-movie{
+    width: 100%;
+    height: auto;
+    transition-duration: 400ms;
+}
+.watch-movie button{
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+.watch-movie button img{
+    width: 25px;
+    height: 25px;
+}
+.slide-button{
+    z-index: 800;
+    position: absolute;
+    width:55%;
+    height: 155px;
+    background-color: transparent;
+    overflow-x: auto;
+    overflow-y: hidden;
+    top: 350px;
+    right: 2%;
+    margin-left: 200px;
+}
+.manual{
+    width: 330%;
+    height: 97%;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding-right: 5px;
+    padding-left: 20px;
+    overflow-y: hidden;
+    padding-bottom: 0px;
+    padding-top: 5px;
+    z-index: 800;
+}
+.manual-btn{
+    height: 95%;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.8;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    z-index: 800;
+}
+.manual-btn.active{
+    height: 92%;
+    width: 100%;
+    overflow-y: hidden;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 2px 2px 5px rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    z-index: 800;
+}
+.manual-btn img{
+    height: 100%;
+    width: 100%;
+    z-index: 800;
+}
+.manual-btn.active img{
+    height: 100%;
+    width: 100%;
+    z-index: 800;
+}
+.manual-btn:hover{
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    overflow-y: hidden;
+    z-index: 800;
+}
+
+
+/* css stylling for movie list portion of the page */
+
+.movies{
+    position: relative;
+    top: 0;
+    left: 15%;
+    background-color: black;
+    height: auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+.movie-wapper{
+    width: 100%;
+    height: 370px;
+    position: relative;
+    overflow-y: hidden;
+    margin-bottom: 50px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+.wapper-heading{
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 2.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-left: 10px;
+    overflow-y: hidden;
+}
+.movieList-slider{
+    width: 100%;
+    height:100%;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.movie-list{
+    height:95%;
+    width: 270%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+.movie-item{
+    width: 135px;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.movie-item:hover{
+    transform: scale(1.05);
+    width: 135px;
+    border-radius: 10px;
+}
+.movie-item:hover .movie-description{
+    opacity: 1;
+    width: 95%;
+    height: auto;
+}
+.movie-item:hover .movie-image{
+    opacity: 0.5;
+}
+.movie-item:hover .movie-name-year-rate{
+    opacity:1;
+    height: 0;
+    width: 0;
+}
+.movie-image{
+    width: 100%;
+    height: 58%;
+    background-color: transparent;
+    transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+.movie-image img{
+    width: 100%;
+    height: 100%;
+}
+.movie-description{
+    position: absolute;
+    top: 20%;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    padding-right: 20px;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+.heading{
+    font-size: 1.2rem;
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    color: white;
+    text-transform: uppercase;
+    padding-left: 5%;
+}
+.movie-description .overview{
+    width: 100%;
+    max-height: 43px;
+    font-size: 0.7rem;
+    font-family: open sans;
+    color: rgb(212, 212, 212);
+    padding-left: 5%;
+    margin-bottom: 8px;
+    padding-top: 10px;
+    overflow-y: hidden;
+}
+.movie-description .watch-rate{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5%;
+}
+.watch-rate button{
+    height: 100%;
+    width: 50%;
+    background-color: red;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10%;
+}
+.watch-rate span{
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+.movie-name-year-rate{
+    background-color: transparent;
+    flex-direction: column;
+    display: flex;
+    flex-direction:column;
+    height: auto;
+    transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+    margin-top: 10px;
+}
+.movie-name-year-rate .movie-name{
+    width: 98%;
+    height: auto;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    padding-left: 3px;
+    overflow-y: hidden;
+}
+.rate-year{
+    width: 100%;
+    height: 25px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    padding-top: 5px;
+}
+.rate-year .rate{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 13px;
+    justify-content: center;
+    margin-right: 15%;
+    margin-left: 5px;
+    font-weight: 100;
+}
+.rate-year .release-year{
+    width: auto;
+    height: 20px;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    color: rgb(202, 202, 202);
+}
+.websries .movie-description{
+    position: absolute;
+    top: 25%;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    padding-right: 20px;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+   
+}
+.websries .movie-description .overview{
+    width: 100%;
+    height: 66px;
+    font-size: 0.7rem;
+    font-family: open sans;
+    color: rgb(212, 212, 212);
+    padding-left: 5%;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    overflow-y: hidden;
+}
+
+
+.advertisement{
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    overflow-x: auto;
+}
+.slide-advertisement{
+    position: absolute;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.anime1{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: black;
+}
+.anime2{
+    display: flex;
+    width: 0;
+    height:0;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.anime3{
+    display: flex;    
+    width: 0;
+    height: 0;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.left-arrow {
+    z-index: 800;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(143, 143, 143);
+    overflow-y: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    cursor: pointer;
+}
+.right-arrow{
+    z-index: 800;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(143, 143, 143);
+    overflow-y: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    right: 2%;
+    cursor: pointer;
+}
+.left-arrow img{
+    width: 80%;
+    height: 80%;
+}
+.right-arrow img{
+    width: 80%;
+    height: 80%;
+}
+.content1{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    z-index: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.anime1::before{
+    z-index: 400;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-image: url(movieflix.jpg);
+    background-size: cover;
+    opacity: 0.25;
+}
+.content1 img{
+    width: 350px;
+    height: 60px;
+    margin-right: 10%;
+}
+.text1{
+    max-width: 60%;
+    height: auto;
+    font-size: 40px;
+    padding-left: 10%;
+    font-weight: 500;
+}
+.text1 span{
+    font-size: 70px;
+    color: red;
+    font-weight: bolder;
+}
+.anime2::before{
+    content: "";
+    position: absolute;
+    left:25%;
+    width: 75%;
+    height: 100%;
+    animation: slide2 35s ease-in 0s ;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+    background-size: cover;
+}
+.content2{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 600;
+    font-size: 20px;
+    background-image: linear-gradient(to right , black, black ,transparent,transparent);
+}
+@keyframes slide2 {
+    0%{
+        background-image: url(action1.jpeg);
+    }
+    10%{
+        background-image: url(action2.jpg);
+    }
+    20%{
+        background-image: url(war1.jpg);
+    }
+    30%{
+        background-image: url(adventure2.webp);
+    }
+    40%{
+        background-image: url(adventure1.webp);
+    }
+    50%{
+        background-image: url(history1.jpeg);
+    }
+    60%{
+        background-image: url(romance2.jpg);
+    }
+    70%{
+        background-image: url(romance1.jpg);
+    }
+    80%{
+        background-image: url(anime1.webp);
+    }
+    90%{
+        background-image: url(anime4.jpg);
+    } 
+}
+.text2{
+    max-width: 60%;
+    max-width: 60%;
+    height: auto;
+    font-size: 40px;
+    padding-left: 10%;
+    font-weight: 500;
+}
+.text2 span{
+    font-size: 70px;
+    color: red;
+    font-weight: bolder;
+}
+.anime3::before{
+    content: "";
+    position: absolute;
+    left:20%;
+    width: 80%;
+    height: 100%;
+    animation: slide3 28s ease-in 0s ;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content3{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 600;
+    font-size: 20px;
+    background-image: linear-gradient(to right , black, black ,transparent,transparent);
+}
+@keyframes slide3 {
+    0%{
+        background-image: url(hindi1.jpg);
+    }
+    20%{
+        background-image: url(hindi2.jpg);
+    }
+    40%{
+        background-image: url(bengali1.webp);
+    }
+    60%{
+        background-image: url(bengali2.jpeg);
+    }
+    80%{
+        background-image: url(bengali3.jpeg);
+    }
+}
+.text3{
+    max-width: 60%;
+    max-width: 60%;
+    height: auto;
+    font-size: 40px;
+    padding-left: 10%;
+    font-weight: 500;
+}
+.text3 span{
+    font-size: 70px;
+    color: red;
+    font-weight: bolder;
+}
+
+
+.rate.green{
+    color: rgb(0, 255, 0);
+}
+.rate.orange{
+    color: orange;
+}
+.rate.red{
+    color: red;
+}
+.watch-rate .green{
+    color: rgb(0, 255, 0);
+}
+.watch-rate .orange{
+    color: orange;
+}
+.watch-rate .red{
+    color: red;
+}
+.active .green{
+    color: rgb(0, 255, 0);
+}
+.active .orange{
+    color: orange;
+}
+.active .red{
+    color: red;
+}
+
+
+@media only screen and (max-width: 1000px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .nameIMG{
+        margin-left:1%;
+    }
+    .section{
+        width: auto;
+        margin-left: 5%;
+        gap: 15px;
+    }
+    .sideNavBar1 .categories a{
+        font-size: 13px;
+        margin-left: 10%;
+    }
+    .sideNavBar1 .NavBarHeading{
+        padding-left: 0%;
+        font-size: 1.1rem;
+        width: 200px;
+    }
+    .sideNavBar1{
+        width: 12%;
+    }
+    .sideNavBar1 .copyright{
+        padding-left: 0;
+    }
+    .container{
+        left: 12%;
+        width: 88%;
+    }
+    .information{
+        width:60%;
+    }
+    .banner-info.active .headding{
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    .banner-info.active .overview{
+        font-size: 1rem;
+    }
+    .banne-slider{
+        height: 420px;
+    }
+    .slide-button{
+        height: 140px;
+    }
+    .movies{
+        width: 88%;
+        left: 12%;
+    }
+    .movie-image{
+        height: 50%;
+    }
+    .movie-wapper{
+        height: 420px;
+    }
+}
+
+
+@media only screen and (max-width:900px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .menuBTN{
+        width: 30px;
+        height: 30px;
+    }
+    .sideNavBar1{
+        height: 0;
+        width: 0;
+    }
+    .account-settings{
+        left: 445px;
+    }
+    .container{
+        left: 0;
+        width: 100%;
+    }
+    .slide-button{
+        height: 135px;
+    }
+    .movies{
+        width: 100%;
+        left: 0;
+    }
+    .wapper-heading{
+        overflow-y: hidden;
+        font-size: 30px;
+    }
+    .movie-image{
+        height: 45%;
+    }
+    .movie-description{
+        top: 20%;
+    }
+    .slide-advertisement{
+        height: 300px;
+    }
+    .left-arrow {
+        top: 40%;
+    }
+    .right-arrow{
+        top: 40%;
+    }
+    .text1{
+        font-size: 30px;
+    }
+    .text2{
+        font-size: 30px;
+    }
+    .text3{
+        font-size: 30px;
+    }
+    .content1 img{
+        width: 400px;
+    }
+}
+
+
+@media only screen and (max-width:750px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .searchbar{
+        height:0;
+        width: 0;
+    }
+    .searchBTN{
+        height:20px;
+        width: 20px;
+        cursor: pointer;
+        top: 16px;
+    }
+    .section{
+        margin-left: 1%;
+    }
+    .account-settings{
+        left: 435px;
+    }
+    .menuBTN{
+        top: 15px;
+        width: 22px;
+        height: 22px;
+        right: 90px;
+    }
+    .genre .NavBarHeading{
+        font-size: 15px;
+    }
+    .genre #category .categories a{
+        font-size: 11px;
+    }
+    .language .NavBarHeading{
+        font-size: 15px;
+    }
+    .language .categories a{
+        font-size: 11px;
+    }
+    .language-account-copyright .account{
+        font-size: 15px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 15px;
+    }
+    #form{
+        height:0;
+        width: 0;
+    }
+    #search{
+        height: 0;
+        width: 0;
+    }
+    .container{
+        height: 500px;
+    }
+    .banne-slider{
+        height: 330px;
+    }
+    .banner-info.active .headding{
+        padding-top: 2rem;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    .banner-info.active .overview{
+        font-size: 0.8rem;
+        max-height: 100px;
+        overflow-y: hidden;
+        margin-bottom: 15px;
+    }
+    .slide-button{
+        height: 130px;
+        top: 320px;
+        width: 400px;
+        padding-left: 0;
+    }
+    .manual{
+        width: 1500px;
+        background-image: none;
+    }
+    .movie-wapper{
+        height: 330px;
+        margin-bottom: 15px;
+    }
+    .wapper-heading{
+        font-size: 2rem;
+    }
+    .movie-list{
+        width: 1800px;
+    }
+    .movie-description .heading{
+        font-size: 13px;
+    }
+    .movie-description .overview{
+        font-size: 8.7px;
+    }
+    .movie-name-year-rate .movie-name{
+        font-size: 12px;
+    }
+    .rate-year .rate{
+        font-size: 10px;
+    }
+    .rate-year .release-year{
+        font-size: 10px;
+    }
+    .websries .movie-description{
+        top: 25%;
+    }
+    .websries .movie-description .overview{
+        font-size: 8.7px;
+        margin-bottom: 5px;
+    }
+    .movie-description .watch-rate{
+        padding-left: 5px;
+    }
+    .watch-rate button{
+        height: auto;
+        width: 50%;
+        font-size: 10px;
+        margin-right: 10%;
+        padding: 5px;
+    }
+    .watch-rate span{
+        font-size: 10px;
+    }
+    .left-arrow {
+        top: 45%;
+        width: 30px;
+        height: 30px;
+    }
+    .right-arrow{
+        top: 45%;
+        width: 30px;
+        height: 30px;
+    }
+    .text1{
+        font-size: 25px;
+    }
+    .text1 span{
+        font-size: 50px;
+    }
+    .text2{
+        font-size: 25px;
+    }
+    .text2 span{
+        font-size: 50px;
+    }
+    .text3{
+        font-size: 25px;
+    }
+    .text3 span{
+        font-size: 50px;
+    }
+    .content1 img{
+        width: 450px;
+    }
+}
+
+
+@media only screen and (max-width:620px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .searchBTN{
+        width: 15px;
+        height: 15px;
+        top: 13px;
+    }
+    .sideNavBar.active{
+        top: 45px;
+    }
+    .sideNavBar.active .genre{
+        width: 68%;
+    }
+    #category .categories{
+        width: 33%;
+        height: auto;
+    }
+    .genre #category .categories a{
+        font-size: 10px;
+    }
+    .sideNavBar.active .language-account-copyright{
+        width: 32%;
+    }
+    .language-account-copyright .account{
+        font-size: 15px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 15px;
+    }
+    .menuBTN{
+        right: 90px;
+        width: 15px;
+        height: 15px;
+        top: 12px;
+    }
+    .section{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 29px;
+        right: 10%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .section a{
+        font-size: 10px;
+    }
+    .section a:hover{
+        font-size: 11px;
+    }
+    .account-settings{
+        top :50px;
+        left: auto;
+        right: 40px;
+    }
+    .account-settings a{
+        font-size: 11px;
+    }
+    .container{
+        height: 400px;
+    }
+    .banne-slider{
+        height: 270px;
+    }
+    .information{
+        top: 25px;
+    }
+    .banner-info.active .headding{
+        padding-top: 0px;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+    .banner-info.active .overview{
+        font-size: 12px;
+        max-height: 85px;
+        overflow-y: hidden;
+        margin-bottom: 15px;
+    }
+    .rating{
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    .rating i{
+        font-size: 14px;
+    }
+    .year{
+        margin-left: 15px;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    .slide-button{
+        height: 110px;
+        top: 280px;
+        width: 280px;
+    }
+    .manual{
+        width: 1150px;
+        padding-left: 5px;
+    }
+    .watch-movie button{
+        font-size: 18px;
+        padding: 5px;
+    }
+    .manual-btn.active{
+        box-shadow: 1px 1px 2px rgb(255, 255, 255);
+        border: 2px solid rgb(255, 255, 255);
+    }
+    .wapper-heading{
+        font-size: 25px;
+        height: 30px;
+        overflow-y: hidden;
+    }
+    .movie-list{
+        width: 1700px;
+    }
+    .movie-description .heading{
+        font-size: 12px;
+        width: 95%;
+    }
+    .movie-description .overview{
+        font-size: 7px;
+    }
+    .movie-description .watch-rate{
+        padding-left: 5px;
+    }
+    .watch-rate button{
+        height: auto;
+        width: 50%;
+        font-size: 10px;
+        margin-right: 10%;
+        padding: 2px;
+    }
+    .watch-rate span{
+        font-size: 10px;
+    }
+    .movie-name-year-rate .movie-name{
+        font-size: 12px;
+    }
+    .websries .movie-description{
+        top: 25%;
+    }
+    .websries .movie-description .overview{
+        font-size: 8.7px;
+        margin-bottom: 5px;
+    }
+    .movie-description .watch-rate{
+        padding-left: 5px;
+    }
+    .text1{
+        font-size: 20px;
+    }
+    .text1 span{
+        font-size: 35px;
+    }
+    .text2{
+        font-size: 20px;
+    }
+    .text2 span{
+        font-size: 35px;
+    }
+    .text3{
+        font-size: 20px;
+    }
+    .text3 span{
+        font-size: 35px;
+    }
+    .content1 img{
+        width: 350px;
+        height: 40px;
+    }
+    
+}
+
+
+@media (max-width:450px){
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    ::-webkit-scrollbar{
+        width: 5px;
+        height: 5px;
+    }
+    .nameIMG{
+        height: 20px;
+        width: 90px;
+    }
+    .section{
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 98%;
+        display: flex;
+        height: auto;
+        margin-left: 0%;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .section a{
+        font-size:8px;
+    }
+    .section a:hover{
+        font-size: 8.2px;
+    }
+    
+    .sideNavBar.active{
+        top: 45px;
+        padding-top: 0;
+        width: 100%;
+    }
+    .sideNavBar.active .genre{
+        width: 68%;
+    }
+    #category .categories{
+        width: 33%;
+        height: 15px;
+        overflow: hidden;
+    }
+    .genre .NavBarHeading{
+        font-size: 12px;
+    }
+    .genre #category .categories a{
+        font-size: 8px;
+    }
+    .sideNavBar.active .language-account-copyright{
+        width: 32%;
+    }
+    .language .NavBarHeading{
+        font-size: 12px;
+    }
+    .language .categories{
+        width: 100%;
+        font-size: 15px;
+    }
+    .language .categories a{
+        font-size: 8px;
+    }
+    .language-account-copyright .account{
+        font-size: 10px;
+    }
+    .language-account-copyright .copyright{
+        font-size: 10px;
+    }
+    .account-settings{
+        right: 0px;
+        top: 45px;
+        border-radius: 6px;
+    }
+    .account-settings a{
+        font-size: 8px;
+        padding: 3px 11px;
+    }
+    .container{
+        height: 360px;
+    }
+    .banne-slider{
+        top: 0px;
+        left: 0%;
+        width: 100%;
+        height: 250px;
+        opacity: 0.3;
+    }
+    .information{
+        background-image: none;
+        width: 100%;
+    }
+    .banner-info.active .headding{
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-bottom: 5px;
+    }
+    .banner-info.active .year-ratting{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+    .rating{
+        margin-right: 25px;
+        letter-spacing: 0px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .rating i{
+        font-size: 10px;
+    }
+    .year{
+        margin-left:25px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        color: rgb(190, 190, 190);
+    }
+    .banner-info.active .overview{
+        font-size: 11px;
+        color: rgb(211, 211, 211);
+        padding-bottom: 5px;
+        transition-duration: 400ms;
+        margin-bottom: 3px;
+    }
+    .watch-movie button{
+        font-size: 12px;
+        border-radius: 8px;
+        padding: 5px;
+    }
+    .watch-movie button img{
+        width: 20px;
+        height: 20px;
+    }
+    .slide-button{
+        width:95%;
+        height: 80px;
+        top: 250px;
+        right: 2px;
+        margin-left: 0px;
+    }
+    .manual{
+        width: 800px;
+        height: 85%;
+        gap: 5px;
+        padding-top: 3px;
+    }
+    .movie-wapper{
+        height: 200px;
+        margin-bottom: 30px;
+    }
+    .wapper-heading{
+        padding: 5px;
+        font-size: 18px;
+        height: 20px;
+        letter-spacing: 0;
+    }
+    .movie-list{
+        height:95%;
+        width: 1000px;
+        gap:5px;
+        padding-top: 2px;
+        padding-left: 5px;
+    }.movie-description .heading{
+        font-size: 7px;
+        width: 98%;
+    }
+    .movie-description .overview{
+        font-size: 5px;
+        padding-top: 5px;
+        margin-bottom: 0;
+    }
+    .movie-description .watch-rate{
+        padding-left: 3px;
+        height: 15px;
+    }
+    .watch-rate button{
+        width: 40%;
+        font-size: 5px;
+        margin-right: 10%;
+        padding: 2px;
+        border-radius: 2px;
+    }
+    .watch-rate span{
+        font-size: 5px;
+    }
+    .websries .movie-description{
+        top: 25%;
+    }
+    .websries .movie-description .overview{
+        font-size: 5px;
+        margin-bottom: 5px;
+        padding-top: 5px;
+    }
+    .movie-name-year-rate .movie-name{
+        font-size: 8px;
+        padding-bottom: 2px;
+    }
+    .rate-year{
+        background-color: rgb(0, 0, 0);
+        height: 20px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .rate-year .rate{
+        font-size: 6px;
+    }
+    .rate-year .rate i{
+        font-size: 5px;
+    }
+    .rate-year .release-year{
+        font-size: 5px;
+        height: 8px;
+        font-weight: 200;
+        padding: 1px 2px;
+        border-radius: 2px;
+    }
+    .slide-advertisement{
+        height: 200px;
+    }
+    .left-arrow {
+        width: 20px;
+        height: 20px;
+        top: 48%;
+    }
+    .right-arrow{
+        width: 20px;
+        height: 20px;
+        top: 48%;
+    }
+    .text1{
+        text-align: center;
+        max-width:none;
+        width: 70%;
+        height: auto;
+        font-size: 10px;
+        position: absolute;
+        left: 40px;
+        padding: 0;
+    }
+    .text1 span{
+        font-size: 25px;
+        padding-bottom: 15px;
+    }
+    .text2{
+        font-size: 10px;
+        padding-left: 40px;
+    }
+    .text2 span{
+        font-size: 25px;
+    }
+    .text3{
+        font-size: 10px;
+        padding-left: 40px;
+    }
+    .text3 span{
+        font-size: 25px;
+    }
+    .content1 img{
+        width: 0px;
+        height: 0px;
+    }
+    .anime2::before{
+        left:0%;
+        width: 100%;
+        opacity: 0.5;
+    }
+    .content2{
+        background-image: none;
+    }
+    .anime3::before{
+        left:0%;
+        width: 100%;
+        opacity: 0.5;
+    }
+    .content3{
+        background-image: none;
+    }
+}
+
+
+@media (max-width:250px){
+    body{
+        background-color: rgb(3, 209, 255);
+    }
+}

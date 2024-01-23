@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<head>
+    <link rel="icon" href="icon_image.png" type="image/icon type">
+    <title>MovieFlix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Libre+Baskerville&family=Libre+Franklin:wght@100;500&family=Lora&family=Merriweather:wght@300&family=Montserrat:wght@100;900&family=Open+Sans:wght@300;700&family=PT+Sans&family=Playfair+Display&family=Raleway:wght@100;200;300&family=Salsa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rating.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header>
+        <!-- webpage name  image -->
+        <div onclick="gethomepage()" class="nameIMG"></div>
+
+        <!-- different section -->
+        <div class="section">
+            <div class="sectionType"><a href="movies.html">MOVIES</a></div>
+            <div class="sectionType"><a href="tv-shows.html">TV SERIES</a></div>
+            <div class="sectionType"><a href="popular.html" >POPULAR</a></div>
+            <div class="sectionType"><a href="tranding.html">TRENDING</a></div>
+            <div class="account sectionType" id="updateName" style="cursor: pointer;"><a><i class="fa-solid fa-user" style="color: #bdbdbd;"></i></a></div>
+            <input id="hello" style="display: none;" value="hello">
+
+        </div>
+        
+        
+        <div class="menuBTN" onclick="showMenuBar()"></div>
+        <div class="searchBTN" onclick="showSearchBar()"></div>
+
+        <!-- //search button -->
+        <!-- <div class="searchbar">
+            <form id="form"><input id="search" style="border-style: none;" placeholder="Search Your Movie"></form>   
+        </div> -->
+
+    </header>
+
+
+<div class="account-settings">
+    <a href="log-in.html" class="sign-out" id="Sign-Out">Sign-out</a>
+    <a href="wishlist.html" href="#" class="wishlist">Wishlist</a>
+    <a href="account-settings.html" class="settings">Settings</a>
+    <a href="rating.html" class="settings">Ratings</a>
+</div>
+
+
+<!-- side navbar -->
+<nav>
+    <div class="sideNavBar1">
+    
+        <!-- different categories -->
+        <div class="NavBarHeading">Genre</div>
+        <div class="categories"><a href="adventure.html">Adventure</a></div>
+        <div class="categories"><a href="fanteny.html">Fantasy</a></div>
+        <div class="categories"><a href="animation.html">Animation</a></div>
+        <div class="categories"><a href="darma.html">Drama</a></div>
+        <div class="categories"><a href="horror.html">Horror</a></div>
+        <div class="categories"><a href="action.html">Action</a></div>
+        <div class="categories"><a href="comedy.html">Comedy</a></div>
+        <div class="categories"><a href="history.html">History</a></div>
+        <div class="categories"><a href="western.html">Western</a></div>
+        <div class="categories"><a href="thriller.html">Thriller</a></div>
+        <div class="categories"><a href="crime.html">Crime</a></div>
+        <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+        <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+        <div class="categories"><a href="mistry.html">Mystery</a></div>
+        <div class="categories"><a href="music.html">Music</a></div>
+        <div class="categories"><a href="romance.html">Romance</a></div>
+        <div class="categories"><a href="family.html">Family</a></div>
+        <div class="categories"><a href="war.html">War</a></div>
+       
+        <!-- choose your language -->
+        <div class="NavBarHeading">Language</div>
+        <div class="categories"><a href="english.html">English</a></div>
+        <div class="categories"><a href="hindi.html">Hindi</a></div>
+        <div class="categories"><a href="bengali.html">Bengali</a></div>
+        <!-- user account -->
+        <div class="copyright">movieflix@265aa</div>
+
+    </div>
+
+    <div class="sideNavBar"> 
+        <div class="genre">
+            <div class="NavBarHeading">Genre</div>
+            <div id="category">
+                <div class="categories"><a href="adventure.html">Adventure</a></div>
+            <div class="categories"><a href="fanteny.html">Fantasy</a></div>
+            <div class="categories"><a href="animation.html">Animation</a></div>
+            <div class="categories"><a href="darma.html">Drama</a></div>
+            <div class="categories"><a href="horror.html">Horror</a></div>
+            <div class="categories"><a href="action.html">Action</a></div>
+            <div class="categories"><a href="comedy.html">Comedy</a></div>
+            <div class="categories"><a href="history.html">History</a></div>
+            <div class="categories"><a href="western.html">Western</a></div>
+            <div class="categories"><a href="thriller.html">Thriller</a></div>
+            <div class="categories"><a href="crime.html">Crime</a></div>
+            <div class="categories"><a href="documentary.html">Dcumentary</a></div>
+            <div class="categories"><a href="science-fiction.html">Science-Fiction</a></div>
+            <div class="categories"><a href="mistry.html">Mystery</a></div>
+            <div class="categories"><a href="music.html">Music</a></div>
+            <div class="categories"><a href="romance.html">Romance</a></div>
+            <div class="categories"><a href="family.html">Family</a></div>
+            <div class="categories"><a href="war.html">War</a></div>
+            </div>
+        </div>
+        <div class="language-account-copyright">
+            <div class="language">
+                <div class="NavBarHeading">Language</div>
+                <div class="categories"><a href="english.html">English</a></div>
+                <div class="categories"><a href="hindi.html">Hindi</a></div>
+                <div class="categories"><a href="bengali.html">Bengali</a></div>
+            </div>
+            <div class="copyright">movieflix@265aa</div>
+        </div>
+        
+    </div>
+</nav>
+        
+        <div class="midpage-content" >
+
+            <div class="movie-list">
+                <p class="heading" style="font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(220, 220, 220);font-weight: 900;">Get&nbsp; All&nbsp;  Your&nbsp;Wishlisted&nbsp; Movies&nbsp;  Here</p>
+                <div class="notsaved">
+                    <img src="upset.png">Uppss.... You didn't rate any movie!!!
+                </div>
+            </div>
+
+
+            <div class="movie-list">
+                <p class="heading" style="font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: rgb(220, 220, 220);font-weight: 900;">Get&nbsp; All&nbsp;  Your&nbsp;Wishlisted&nbsp; Tv-Series&nbsp;  Here</p>
+                <div class="notsaved">
+                    <img src="upset.png">Uppss.... You didn't rate any series!!!
+                </div>
+            </div>
+
+        </div>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+    import { getDatabase, ref , get, child ,remove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyACFoTUxtBAzWHg4c1-2vC9UAumSmmzjnY",
+        authDomain: "movieflix-c7a43.firebaseapp.com",
+        databaseURL: "https://movieflix-c7a43-default-rtdb.firebaseio.com",
+        projectId: "movieflix-c7a43",
+        storageBucket: "movieflix-c7a43.appspot.com",
+        messagingSenderId: "289003154218",
+        appId: "1:289003154218:web:9a994bece8172785824c53",
+        measurementId: "G-F52DXVS77G"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getDatabase();
+    const dbref = ref(db);
+
+    let bv = window.localStorage.getItem("user-id")
+    console.log(bv)
+
+    // document.getElementsByClassName("midpage-content")[0].innerHTML=""
+    
+    let notsaved0 = document.getElementsByClassName("notsaved")[0]
+    let notsaved1 = document.getElementsByClassName("notsaved")[1]
+    let movielist0 = document.getElementsByClassName("movie-list")[0]
+    let movielist1 = document.getElementsByClassName("movie-list")[1]
+
+    console.log("hello")
+
+
+    GetmovieRating()
+    function GetmovieRating() {
+        get(child(dbref, `Users/${bv}/userRating/`)).then((movie)=>{
+            if(movie){
+                let itemcount=0        
+                movie.forEach(item =>{
+                    
+                    notsaved0.innerHTML=""
+                    notsaved0.style.padding = 0
+
+                    let key = item.key
+                    let value = item.val()
+        
+                    let id = value.idOfMovie
+        
+                    console.log(key , id)
+        
+                    // function getMovieDetails(movieid){
+                    //     window.localStorage.setItem("movieid" , String(movieid))
+                    //     window.location = "movie-detail.html"
+                    // }
+        
+                    let rateditems = document.createElement("div")
+                    rateditems.classList.add("rateditems")
+                    rateditems.innerHTML=`
+                        <div class="ratedmovie">
+                            <img src="${value.imageofMovie}">
+                            <div class="name">${value.nameofMovie}</div>
+                        </div>
+                        <div class="user-ratings">
+                            <button class="custom-rating">
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                            </button>
+                            <input class="movieid" value="${value.idOfMovie}">
+                            <button class="watch">Watch</button>
+                            <button class="remove0">remove</button>
+                        </div>
+                    `  
+        
+                    movielist0.appendChild(rateditems)
+                    console.log(itemcount)
+        
+                    let a = movielist0.getElementsByClassName("custom-rating")[itemcount]
+                    let b = a.getElementsByClassName("customInput")
+        
+                        for(let i=0; i < `${value.userRating}` ; i++){
+                            b[i].style.color = "rgb(255, 213, 0)"
+                        }
+                    
+                    let d = movielist0.getElementsByClassName("movieid")[itemcount].value    
+                    let e = movielist0.getElementsByClassName("watch")[itemcount]
+                    // e.addEventListener("click" , getMovieDetails(d.value) )
+                    
+                        e.addEventListener("click" , ()=>{
+                            console.log(d)
+                            window.localStorage.setItem("movieid" , String(d))
+                            window.location = "movie-detail.html"                      
+                        })
+                    
+                    itemcount++  
+                    
+                    })
+
+            
+            
+                    let removeMovie = Array.from(document.querySelectorAll(".remove0"))
+                    removeMovie.forEach((data , index)=>{
+                        let a = movielist0.getElementsByClassName("name")[index].innerHTML
+                        data.addEventListener("click" , ()=>{
+                            remove(ref(db ,  `Users/${bv}/userRating/${a}` )).then(()=>{
+                                data.innerHTML=`Deleted`
+                            })
+                            .then(()=>{
+                                setTimeout(() => {
+                                    window.location.reload()
+                                }, 500);
+                            })
+                            .catch((error)=>{
+                                alert("unsuccessful , error - " + error )
+                            })
+                        })
+                        
+                    })
+
+
+                }    
+            })
+    }
+
+
+
+    GetseriesRating()
+    function GetseriesRating() {
+        get(child(dbref, `Users/${bv}/userseriesRating/`)).then((movie)=>{
+            if(movie){
+                let itemcount=0        
+                movie.forEach(item =>{
+                    
+                    notsaved1.innerHTML=""
+                    notsaved1.style.padding = 0
+
+                    let key = item.key
+                    let value = item.val()
+        
+                    let id = value.idOfseries
+        
+                    console.log(key , id)
+        
+                    let rateditems = document.createElement("div")
+                    rateditems.classList.add("rateditems")
+                    rateditems.innerHTML=`
+                        <div class="ratedmovie">
+                            <img src="${value.imageofseries}">
+                            <div class="name">${value.nameofseries}</div>
+                        </div>
+                        <div class="user-ratings">
+                            <button class="custom-rating">
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                                <i class="fa-solid fa-star customInput"></i>
+                            </button>
+                            <input class="movieid" value="${value.idOfseries}">
+                            <button class="watch">Watch</button>
+                            <button class="remove1">remove</button>
+                        </div>
+                    `  
+        
+                    movielist1.appendChild(rateditems)
+                    console.log(itemcount)
+                    
+                    let a = movielist1.getElementsByClassName("custom-rating")[itemcount]
+                    let b = a.getElementsByClassName("customInput")
+                    console.log(value.userRating)
+        
+                        for(let i=0; i < `${value.userRating}` ; i++){
+                            b[i].style.color = "rgb(255, 213, 0)"
+                        }
+                    
+                    let d = movielist1.querySelectorAll(".movieid")[itemcount].value
+                    let e = movielist1.querySelectorAll(".watch")[itemcount]
+                    
+                        e.addEventListener("click" , ()=>{
+                            
+                            window.localStorage.setItem("seriesid" , String(d))   
+                            window.location.href = "series-detail.html"             
+                        })
+                    
+                    itemcount++  
+                    
+                    })
+
+
+
+                    let removeseries = Array.from(document.getElementsByClassName("remove1"))
+                    removeseries.forEach((data , index)=>{
+                        let b = movielist1.getElementsByClassName("name")[index].innerHTML
+                        data.addEventListener("click" , ()=>{
+                            remove(ref(db ,  `Users/${bv}/userseriesRating/${b}` )).then(()=>{
+                                data.innerHTML=`Deleted`
+                            })
+                            .then(()=>{
+                                window.location.reload()
+                            })
+                            .catch((error)=>{
+                                alert("unsuccessful , error - " + error )
+                            })
+                        })
+                    })
+                }    
+            })
+    }
+
+
+    
+    function removeMovie() {
+        let removeMovie = Array.from(document.getElementsByClassName("remove0"))
+        console.log(removeMovie)
+        removeMovie.forEach((data , index)=>{
+            let a = document.getElementsByClassName("name")[index].innerHTML
+            console.log(a)
+            data.addEventListener("click" , ()=>{
+                remove(ref(db ,  `Users/${bv}/userRating/${a}` )).then(()=>{
+                    data.innerHTML=`Deleted`
+                })
+                .then(()=>{
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 1000);
+                })
+                .catch((error)=>{
+                    alert("unsuccessful , error - " + error )
+                })
+            })
+            
+        }) 
+    }
+
+</script>     
+
+<script>
+    function getindexpage() {
+            window.location = "index.html"
+        }
+</script>
+
+<script src="rating.js"></script>
+    
+</body>
+</html>    

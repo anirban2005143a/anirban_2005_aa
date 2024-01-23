@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icon_image.png" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix</title>
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <!-- webpage name  image -->
+        <div class="nameIMG"></div>
+    </div>
+
+    <div class="page-background"></div>
+    <div class="page-shadow"></div>
+    <div class="mid-page-content">
+    
+        <div class="welcome">Welcome!</div>
+
+        <div id="form" class="sign-up">
+            <form>
+                <div class="inputs">
+                    <div class="error"></div>
+                    <input class="fname" type="text" placeholder="Enter Your First Name" required>
+                    <input class="lname" type="text" placeholder="Enter Your Last Name" required>
+                    <input class="sign-up-email" type="email" placeholder="Enter Your Email" required>
+                    <input class="sign-up-password" type="password" placeholder="Enter Your Password" required>
+                </div>
+
+                <div class="submit">
+                    <button id="signUp" type="submit">Sign-Up</button>
+                </div>
+                <div class="text">Already have a account? <a class="loginBTN" href="log-in.html">Log In</a> </div>
+                
+            </form>
+        </div>
+           
+    </div>
+    
+
+
+<script type="module">
+  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import { getAuth,createUserWithEmailAndPassword , GoogleAuthProvider , signInWithRedirect , signOut , onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyACFoTUxtBAzWHg4c1-2vC9UAumSmmzjnY",
+      authDomain: "movieflix-c7a43.firebaseapp.com",
+      projectId: "movieflix-c7a43",
+      storageBucket: "movieflix-c7a43.appspot.com",
+      messagingSenderId: "289003154218",
+      appId: "1:289003154218:web:9a994bece8172785824c53",
+      measurementId: "G-F52DXVS77G"
+    };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider()
+
+    let form = document.querySelector("form")
+    console.log(form)
+    let fname = document.querySelector(".fname")
+    let lname = document.querySelector(".lname")
+    let signUpEmail = document.querySelector(".sign-up-email")
+    let signUpPassword = document.querySelector(".sign-up-password")
+    let signUp = document.querySelector(".sign-up")
+    let google = document.querySelector(".google")
+
+    let signUpBTN = document.getElementById("signUp")
+    console.log(signUpBTN.innerHTML)
+  
+    // let bv = window.localStorage.getItem("user-id")
+    // console.log(bv)
+
+  let RegisterUser = evt => {
+
+    createUserWithEmailAndPassword(auth,signUpEmail.value,signUpPassword.value)
+    .then((credentials)=>{
+      console.log(credentials.user.uid);
+      window.localStorage.setItem("user-id" , String(credentials.user.uid))
+      
+      
+      set(ref(db,`Users/` + credentials.user.uid + `/information/Userinfo`),{
+        firstname: fname.value,
+        lastname: lname.value,
+        useremail: signUpEmail.value,
+        password: signUpPassword.value
+        
+      })
+      .then(()=>{
+        sessionStorage.setItem("user-creds",JSON.stringify(credentials.user))
+      })
+      .then(()=>{
+        document.getElementsByClassName("error")[0].style.display = "none"
+        setTimeout(()=>{
+          document.getElementsByClassName("error")[0].innerHTML = ""
+          document.getElementsByClassName("error")[0].style.border = "none"
+          signUpBTN.innerHTML=""
+          signUpBTN.innerHTML = "Let's Explore MovieFlix"
+          signUpBTN.style.border = "2px solid lime"
+          signUpBTN.style.color = "lime"
+          signUpBTN.style.backgroundColor = "black"
+          signUpBTN.style.borderRadius = "10px"
+          document.getElementsByClassName("welcome")[0].style.color = "lime"
+          document.getElementsByClassName("welcome")[0].style.textShadow = "-3px 3px 6px lime"
+
+        },1500)
+      })
+      .then(()=>{
+        signUpBTN.addEventListener("click" , ()=>{
+          window.location.href = "index.html"
+        })
+      })
+      
+    })
+    .catch((error)=>{
+      signUpBTN.innerHTML = "Sign-up"
+      console.log(error.code);
+      console.log(error.message.split("(")[1].split(")")[0].split("/")[1]);
+      document.getElementsByClassName("error")[0].style.border = "2px solid #eeff00"
+      document.getElementsByClassName("error")[0].style.paddingTop = "5px"
+      document.getElementsByClassName("error")[0].style.paddingBottom = "5px"
+      document.getElementsByClassName("error")[0].innerHTML = `<i class="fa-solid fa-triangle-exclamation" style="color: #eeff00;"></i>&nbsp;` + error.message.split("(")[1].split(")")[0].split("/")[1]  
+    })
+  }
+
+  signUp.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    signUpBTN.innerHTML = `<div class="loading"></div>&nbsp;Loading`
+    RegisterUser()
+  })
+
+  
+
+  </script>
+</body>
+</html>

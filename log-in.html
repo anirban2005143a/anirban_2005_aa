@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icon_image.png" type="image/icon type">
+    <title>MovieFlix</title>
+    <link rel="stylesheet" href="log-in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <!-- webpage name  image -->
+        <div class="nameIMG"></div>
+    </div>
+
+    <div class="page-background"></div>
+    <div class="page-shadow"></div>
+    <div class="mid-page-content">
+    
+        <div class="welcome">Welcome!</div>
+
+        <div id="form" class="Log-in">
+            <form id="loginFrom">
+                <div class="inputs">
+                    <div class="error"></div>
+                    <input class="login-email" type="email" placeholder="Enter Your Email" required>
+                    <input class="login-password" type="password" placeholder="Enter Your Password" required>
+                </div>
+
+                <div class="submit">
+                    <button id="loginBTN" type="submit">Log-in</button>
+                </div>
+                <div class="text">Do not have a account? <a class="signupBTN" href="sign-up.html">Create Account</a> </div>
+                
+            </form>
+        </div>
+
+           
+    </div>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase, get, ref, child } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import { getAuth,signInWithEmailAndPassword ,createUserWithEmailAndPassword , signInWithPopup ,GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+ 
+    const firebaseConfig = {
+      apiKey: "AIzaSyACFoTUxtBAzWHg4c1-2vC9UAumSmmzjnY",
+      authDomain: "movieflix-c7a43.firebaseapp.com",
+      projectId: "movieflix-c7a43",
+      storageBucket: "movieflix-c7a43.appspot.com",
+      messagingSenderId: "289003154218",
+      appId: "1:289003154218:web:9a994bece8172785824c53",
+      measurementId: "G-F52DXVS77G"
+    };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+  const dbref = ref(db);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider(app);
+  
+  let emailinp = document.querySelector('.login-email');
+  let passwordinp = document.querySelector('.login-password')
+  let mainform = document.getElementById('loginFrom')
+  
+  // let bv = window.localStorage.getItem("user-id")
+  // console.log(bv)
+
+
+  let SignInUser = evt => {
+
+    signInWithEmailAndPassword(auth,emailinp.value,passwordinp.value)
+    .then((credentials)=>{
+      console.log(credentials.user);
+      window.localStorage.setItem("user-id" , String(credentials.user.uid))
+      
+      get(child(dbref,`Users/` +credentials.user.uid + `/information/Userinfo`)).then((snapshot)=>{
+        if(snapshot.exists){
+          sessionStorage.setItem("user-info", JSON.stringify({
+            firstname: snapshot.val().firstname,
+            lastname:snapshot.val().lastname
+          }))
+          sessionStorage.setItem("user-creds",JSON.stringify(credentials.user))
+          // window.location.href = 'index.html';
+        }
+      })
+      .then(()=>{
+        document.getElementsByClassName("error")[0].style.display = "none"
+        setTimeout(()=>{
+          document.getElementsByClassName("error")[0].innerHTML = ""
+          document.getElementsByClassName("error")[0].style.border = "none"
+          loginBTN.innerHTML=""
+          loginBTN.innerHTML = "Let's Explore MovieFlix"
+          loginBTN.style.border = "2px solid lime"
+          loginBTN.style.color = "lime"
+          loginBTN.style.backgroundColor = "black"
+          loginBTN.style.borderRadius = "10px"
+          document.getElementsByClassName("welcome")[0].style.color = "lime"
+          document.getElementsByClassName("welcome")[0].style.textShadow = "-3px 3px 6px lime"
+
+        },1000)
+      })
+      .then(()=>{
+        loginBTN.addEventListener("click" , ()=>{
+          window.location.href = "index.html"
+        })
+      })
+    })
+   
+    .catch((error)=>{
+      loginBTN.innerHTML = "Log-in"
+      console.log(error.message);
+      document.getElementsByClassName("error")[0].style.display = "block"
+      document.getElementsByClassName("error")[0].style.border = "2px solid #eeff00"
+      document.getElementsByClassName("error")[0].style.paddingTop = "5px"
+      document.getElementsByClassName("error")[0].style.paddingBottom = "5px"
+      document.getElementsByClassName("error")[0].innerHTML = `<i class="fa-solid fa-triangle-exclamation" style="color: #eeff00;"></i>&nbsp;` + "Email or Password is incorrect"  
+    })
+
+  }
+  mainform.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    loginBTN.innerHTML = `<div class="loading"></div>&nbsp;Loading`
+    SignInUser()
+  } )
+  
+  </script>
+
+
+</body>
+</html>
