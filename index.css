@@ -119,12 +119,12 @@ header{
 }
 .searchBTN{
     position: absolute;
-    top: 13px;
-    right: 250px;
-    height: 18px;
-    width:18px;
+    top: 10px;
+    right: 5%;
+    height: 25px;
+    width:25px;
     background-image: url(search_icon.png);
-    background-size: contain;
+    background-size: cover;
     cursor: pointer;
     opacity: 0.7;
     transition: all 400ms ;
@@ -575,8 +575,8 @@ header{
     margin-bottom: 5px;
     transform: scale(1.05);
     opacity: 1;
-    box-shadow: 2px 2px 5px rgb(255, 255, 255);
-    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 4px 4px 5px rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
     z-index: 800;
 }
 .manual-btn img{
@@ -1134,9 +1134,12 @@ header{
         margin-left:1%;
     }
     .section{
-        width: auto;
+        width: 50%;
         margin-left: 5%;
-        gap: 15px;
+        gap: 10px;
+    }
+    .account-settings{
+        right: 15%;
     }
     .sideNavBar1 .categories a{
         font-size: 13px;
@@ -1190,16 +1193,23 @@ header{
     body{
         background-color: rgb(0, 0, 0);
     }
+    .section{
+        width: 60%;
+    }
+    .account-settings{
+        right: 15%;
+    }
     .menuBTN{
         width: 30px;
         height: 30px;
+        right: 12%;
+    }
+    .searchBTN{
+        top: 13px;
     }
     .sideNavBar1{
         height: 0;
         width: 0;
-    }
-    .account-settings{
-        left: 445px;
     }
     .container{
         left: 0;
@@ -1264,7 +1274,7 @@ header{
         margin-left: 1%;
     }
     .account-settings{
-        left: 435px;
+        right: 15%;
     }
     .menuBTN{
         top: 15px;

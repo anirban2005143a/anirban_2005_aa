@@ -123,12 +123,12 @@ header{
 }
 .searchBTN{
     position: absolute;
-    top: 13px;
-    right: 250px;
-    height: 18px;
-    width:18px;
+    top: 10px;
+    right: 5%;
+    height: 25px;
+    width:25px;
     background-image: url(search_icon.png);
-    background-size: contain;
+    background-size: cover;
     cursor: pointer;
     opacity: 0.7;
     transition: all 400ms ;
@@ -519,9 +519,9 @@ button{
         margin-left:1%;
     }
     .section{
-        width: auto;
+        width: 60%;
         margin-left: 5%;
-        gap: 15px;
+        gap: 10px;
     }
     .sideNavBar1 .categories a{
         font-size: 13px;
@@ -548,13 +548,17 @@ button{
     .menuBTN{
         width: 30px;
         height: 30px;
+        right: 12%;
+    }
+    .searchBTN{
+        top: 13px;
     }
     .sideNavBar1{
         height: 0;
         width: 0;
     }
     .account-settings{
-        left: 445px;
+        right: 15%;
     }
     .midpage-content{
         left: 0;
@@ -567,8 +571,13 @@ button{
     body{
         background-color: rgb(0, 0, 0);
     }
+    .section{
+        width: 60%;
+        margin-left: 1%;
+        gap: 10px;
+    }
     .account-settings{
-        left: 435px;
+        right: 15%;
     }
     .searchbar{
         height:0;
@@ -585,10 +594,6 @@ button{
         width: 22px;
         height: 22px;
         right: 90px;
-    }
-    
-    .account-settings{
-        left: 435px;
     }
     .genre .NavBarHeading{
         font-size: 15px;
