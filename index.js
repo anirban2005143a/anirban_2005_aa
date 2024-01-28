@@ -246,84 +246,84 @@ let s = movielist[3]
 let t = movielist[4]
 console.log(p)
 
-p.addEventListener("wheel", (e) => {
-    e.preventDefault();
+// p.addEventListener("wheel", (e) => {
+//     e.preventDefault();
 
-    const scrollpx = 40
+//     const scrollpx = 40
 
-    if(e.deltaY > 0){
-      p.scrollLeft += scrollpx
-    }
+//     if(e.deltaY > 0){
+//       p.scrollLeft += scrollpx
+//     }
 
-    else{
-      p.scrollLeft -= scrollpx
-    }
-})
-q.addEventListener("wheel", (e) => {
-    e.preventDefault();
+//     else{
+//       p.scrollLeft -= scrollpx
+//     }
+// })
+// q.addEventListener("wheel", (e) => {
+//     e.preventDefault();
 
-    const scrollpx = 40
+//     const scrollpx = 40
 
-    if(e.deltaY > 0){
-      q.scrollLeft += scrollpx
-    }
+//     if(e.deltaY > 0){
+//       q.scrollLeft += scrollpx
+//     }
 
-    else{
-      q.scrollLeft -= scrollpx
-    }
-})
-r.addEventListener("wheel", (e) => {
-    e.preventDefault();
+//     else{
+//       q.scrollLeft -= scrollpx
+//     }
+// })
+// r.addEventListener("wheel", (e) => {
+//     e.preventDefault();
 
-    const scrollpx = 40
+//     const scrollpx = 40
 
-    if(e.deltaY > 0){
-      r.scrollLeft += scrollpx
-    }
+//     if(e.deltaY > 0){
+//       r.scrollLeft += scrollpx
+//     }
 
-    else{
-      r.scrollLeft -= scrollpx
-    }
-})
-s.addEventListener("wheel", (e) => {
-    e.preventDefault();
+//     else{
+//       r.scrollLeft -= scrollpx
+//     }
+// })
+// s.addEventListener("wheel", (e) => {
+//     e.preventDefault();
 
-    const scrollpx = 40
+//     const scrollpx = 40
 
-    if(e.deltaY > 0){
-      s.scrollLeft += scrollpx
-    }
+//     if(e.deltaY > 0){
+//       s.scrollLeft += scrollpx
+//     }
 
-    else{
-      s.scrollLeft -= scrollpx
-    }
-})
-t.addEventListener("wheel", (e) => {
-    e.preventDefault();
+//     else{
+//       s.scrollLeft -= scrollpx
+//     }
+// })
+// t.addEventListener("wheel", (e) => {
+//     e.preventDefault();
 
-    const scrollpx = 40
+//     const scrollpx = 40
 
-    if(e.deltaY > 0){
-      t.scrollLeft += scrollpx
-    }
+//     if(e.deltaY > 0){
+//       t.scrollLeft += scrollpx
+//     }
 
-    else{
-      t.scrollLeft -= scrollpx
-    }
-})
-bannerButton.addEventListener("wheel", (e) => {
-    e.preventDefault();
+//     else{
+//       t.scrollLeft -= scrollpx
+//     }
+// })
+// bannerButton.addEventListener("wheel", (e) => {
+//     e.preventDefault();
 
-    const scrollpx = 40
+//     const scrollpx = 40
 
-    if(e.deltaY > 0){
-      bannerButton.scrollLeft += scrollpx
-    }
+//     if(e.deltaY > 0){
+//       bannerButton.scrollLeft += scrollpx
+//     }
 
-    else{
-      bannerButton.scrollLeft -= scrollpx
-    }
-})
+//     else{
+//       bannerButton.scrollLeft -= scrollpx
+//     }
+// })
 
 
 
