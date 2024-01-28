@@ -90,21 +90,8 @@
         setTimeout(()=>{
           document.getElementsByClassName("error")[0].innerHTML = ""
           document.getElementsByClassName("error")[0].style.border = "none"
-          loginBTN.innerHTML=""
-          loginBTN.innerHTML = "Let's Explore MovieFlix"
-          loginBTN.style.border = "2px solid lime"
-          loginBTN.style.color = "lime"
-          loginBTN.style.backgroundColor = "black"
-          loginBTN.style.borderRadius = "10px"
-          document.getElementsByClassName("welcome")[0].style.color = "lime"
-          document.getElementsByClassName("welcome")[0].style.textShadow = "-3px 3px 6px lime"
-
-        },1000)
-      })
-      .then(()=>{
-        loginBTN.addEventListener("click" , ()=>{
           window.location.href = "index.html"
-        })
+        },1000)
       })
     })
    

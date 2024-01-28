@@ -102,21 +102,8 @@
         setTimeout(()=>{
           document.getElementsByClassName("error")[0].innerHTML = ""
           document.getElementsByClassName("error")[0].style.border = "none"
-          signUpBTN.innerHTML=""
-          signUpBTN.innerHTML = "Let's Explore MovieFlix"
-          signUpBTN.style.border = "2px solid lime"
-          signUpBTN.style.color = "lime"
-          signUpBTN.style.backgroundColor = "black"
-          signUpBTN.style.borderRadius = "10px"
-          document.getElementsByClassName("welcome")[0].style.color = "lime"
-          document.getElementsByClassName("welcome")[0].style.textShadow = "-3px 3px 6px lime"
-
-        },1500)
-      })
-      .then(()=>{
-        signUpBTN.addEventListener("click" , ()=>{
           window.location.href = "index.html"
-        })
+        },1000)
       })
       
     })
